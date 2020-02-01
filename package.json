@@ -34,8 +34,7 @@
   },
   "dependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "node-sass": "^4.13.0",
-    "normalize.css": "^8.0.1"
+    "node-sass": "^4.13.0"
   },
   "description": "",
   "repository": {

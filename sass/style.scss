@@ -1,10 +1,12 @@
-import "variables";
-import "mixins";
-import "normalize";
-import "layout";
+@import 'variables';
+@import 'mixins';
+@import 'normalize';
+@import 'layout';
 /* components */
-import "components/form_field";
+@import 'components/form_field';
 /* Sections */
-import "section/registration_form";
+@import 'section/registration_form';
 /* Pages / Views */
-import "pages/registration";
+@import 'main_side';
+@import 'calendar';
+@import 'pages/registration';

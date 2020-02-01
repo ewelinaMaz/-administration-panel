@@ -1,10 +1,70 @@
 /* Colors */
-$paragraph-color: #000000;
-$brand-main-color: #ff0000;
+$color-dark: #000000;
+$brand-main-color: #DE781F;
+$brand-second-color: #1F85DE;
+$font-color: #535756;
+$color-light: #FFFFFF;
+
 
 /* Font sizes */
 $paragraph-font-size: 16px;
 
 /* Fonts */
-$brand-font: 'Open Sans', sans-serif;
-$paragraph-font: 'Open Sans', sans-serif;
+$brand-font: 'Nunito', sans-serif;
+$brand-second-font: 'Lobster', cursive;
+$paragraph-font: 'Comfortaa', cursive;
+
+$font-light: 300;
+$font-normal: 400;
+$font-semibold: 500;
+$font-bold: 700;
+
+$transition: all .3s;
+$radius: 4px;
+
+/* Typography */
+
+.h1 {
+  font-family: $brand-font;
+  font-size: 26px;
+  font-weight: $font-semibold;
+  text-transform: uppercase;
+}
+
+.h2 {
+	font-family: $brand-font;
+  font-size: 20px;
+  font-weight: $font-bold;
+  text-transform: uppercase;
+}
+
+.h3 {
+	font-family: $brand-font;
+  font-size: 18px;
+  font-weight: $font-bold;
+  text-transform: uppercase;
+}
+
+li a {
+	text-decoration: none;
+	color: darker($color-light, 10%);
+	font-weight: $font-normal;
+	cursor: pointer;
+	}
+
+img {
+ width: 30px;
+ height: 30px;
+ line-height: 30px;
+ cursor: pointer;
+}
+
+.circle {
+	position: absolute;
+	top: 25%;
+	left: 47%;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+ 	background-color: #f58220;
+}
