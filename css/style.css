@@ -400,16 +400,18 @@ body {
 }
 
 .container {
+  position: relative;
   max-width: 1400px;
-  height: 600px;
+  height: 700px;
   margin: 20px auto;
   padding: 10px 20px;
   background: #FFFFFF;
+  left: 5%;
 }
 
 .container-fluid {
   width: 100%;
-  height: 300px;
+  height: 400px;
   padding-right: 20px;
   padding-left: 20px;
   margin-right: auto;
@@ -428,6 +430,7 @@ body {
       justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .col-4 {
@@ -544,6 +547,7 @@ header .header_item-sm img {
   cursor: pointer;
 }
 
+/*------------------------------------------------------------------------*/
 /*Aside*/
 aside {
   position: fixed;
@@ -553,6 +557,7 @@ aside {
   float: left;
   background: #000000;
   color: #535756;
+  /* Comunication section */
 }
 
 aside .title {
@@ -564,7 +569,8 @@ aside .title {
 
 aside button {
   display: inline-block;
-  background-color: #535756;
+  background-color: #000000;
+  color: #FFFFFF;
   border-radius: 10%;
   border-color: #535756;
   cursor: pointer;
@@ -640,7 +646,7 @@ aside .manager .managerImg {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #DE781F;
+  background-color: #806A6A;
 }
 
 aside .manager .circleManager {
@@ -649,15 +655,18 @@ aside .manager .circleManager {
   background-color: #04ae00;
 }
 
+/*------------------------------------------------------------------------*/
 /*Chart*/
 .section-title {
   border-bottom: 1px solid #535756;
   color: #535756;
+  margin-bottom: 30px;
 }
 
 .row {
   -ms-flex-pack: center;
       justify-content: center;
+  /* Fake calendar */
 }
 
 .row .calendar {
@@ -671,6 +680,7 @@ aside .manager .circleManager {
 
 .row .calendar h2 {
   margin: 0 auto;
+  color: #535756;
 }
 
 .row .img-calendar {
@@ -686,11 +696,45 @@ aside .manager .circleManager {
   margin-top: 10px;
 }
 
+/* datasets */
+.data-table {
+  border-top: solid 1px #535756;
+  margin: 40px 0 auto;
+  min-height: 170px;
+}
+
+.data-table .data {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: space-around;
+      align-items: space-around;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  border-bottom: solid 1px #535756;
+  margin: 0 30px;
+  padding-left: 30px;
+  height: 50px;
+}
+
+.data-table .data h2 {
+  margin: 5px 20px;
+}
+
+.data-table .data p {
+  margin: 5px 20px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #535756;
+}
+
+/* button */
 .main {
   display: block;
-  background: #DE781F;
+  background: #E77B7E;
   color: #FFFFFF;
-  border-color: #DE781F;
+  border-color: #E77B7E;
   border-radius: 4px;
   transition: all 0.3s;
   display: block;
@@ -700,18 +744,88 @@ aside .manager .circleManager {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
+  margin-left: 20px;
+  height: 50px;
+  width: 50px;
+  opacity: 0.8;
 }
 
 .main:hover {
-  background: #c86c1c;
+  background: #e36569;
 }
 
-.main a {
-  text-decoration: none;
+.main:hover {
+  background: #e36569;
+}
+
+/*------------------------------------------------------------------------*/
+/*Links*/
+.add {
+  display: block;
+  background: #E77B7E;
   color: #FFFFFF;
+  border-color: #E77B7E;
+  border-radius: 4px;
+  transition: all 0.3s;
+  display: block;
+  border-width: 1px;
+  border-style: solid;
+  padding: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 20px;
+  opacity: 0.8;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 18%;
 }
 
-.main:hover {
-  background: #c86c1c;
+.add:hover {
+  background: #e36569;
+}
+
+.add:hover {
+  background: #e36569;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.table-row {
+  position: relative;
+  margin-top: 50px;
+}
+
+.table-row table {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0 30px;
+}
+
+.table-row table tr:hover {
+  border: none;
+  background: #fbe7e7;
+}
+
+.table-row table td {
+  max-height: 35px;
+  padding-right: 60px;
+  border-bottom: solid 1px #000000;
+}
+
+.table-row table td h3 {
+  margin: 5px;
+  color: #535756;
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */

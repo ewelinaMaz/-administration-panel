@@ -66,6 +66,7 @@ header {
 		}
 	}
 }
+/*------------------------------------------------------------------------*/
 /*Aside*/
 aside {
 	position: fixed;
@@ -85,7 +86,8 @@ aside {
 
 	button {
 		display: inline-block;
-		background-color: $font-color;
+		background-color: $color-dark;
+		color: $color-light;
 		border-radius: 10%;
 		border-color: $font-color;
 		cursor: pointer;
@@ -131,7 +133,7 @@ aside {
 			margin-left: 15px;
 		}
 	}
-
+	/* Comunication section */
 	.manager {
 		display: flex;
 		justify-content: space-around;
@@ -152,15 +154,17 @@ aside {
 		}
 	}
 }
+/*------------------------------------------------------------------------*/
 /*Chart*/
 .section-title {
 	border-bottom: 1px solid $font-color;
 	color: $font-color;
+	margin-bottom: 30px;
 }
 
 .row {
 	justify-content: center;
-
+	/* Fake calendar */
 	.calendar {
 		display: inline-block;
 		border: 1px solid $font-color;
@@ -171,6 +175,7 @@ aside {
 
 		h2 {
 			margin: 0 auto;
+			color: $font-color;
 		}
 	}
 
@@ -187,17 +192,87 @@ aside {
 		}
 	}
 }
+/* datasets */
+.data-table {
+	border-top: solid 1px $font-color;
+	margin: 40px 0 auto;
+	min-height: 170px;
 
+	.data {
+		@include flex(row, space-around, space-between);
+		border-bottom: solid 1px $font-color;
+		margin: 0 30px;
+		padding-left: 30px;
+		height: 50px;
+
+		h2 {
+
+			margin: 5px 20px;
+		}
+
+		p {
+			margin: 5px 20px;
+			font-size: 20px;
+			font-weight: $font-normal;
+			color: $font-color;
+		}
+	}
+}
+/* button */
 .main {
 	display: block;
-	@include btn($brand-main-color, $color-light, $brand-main-color);
-
-	& a {
-		text-decoration: none;
-		color: $color-light;
-	}
+	@include btn($brand-second-color, $color-light, $brand-second-color);
+	margin-left: 20px;
+	height: 50px;
+	width: 50px;
+	opacity: 0.8;
 
 	&:hover {
-		background: darken($brand-main-color, 5%);
+		background: darken($brand-second-color, 5%);
+	}
+}
+/*------------------------------------------------------------------------*/
+/*Links*/
+.add {
+	display: block;
+	@include btn($brand-second-color, $color-light, $brand-second-color);
+	margin-left: 20px;
+	opacity: 0.8;
+	@include center;
+	top: 18%;
+
+	&:hover {
+		background: darken($brand-second-color, 5%);
+	}
+}
+
+table {
+	border-collapse: collapse;
+}
+
+.table-row {
+	position: relative;
+	margin-top: 50px;
+
+	table {
+		@include flex(row, center, center);
+		margin: 0 30px;
+
+		tr:hover {
+			border: none;
+			background: lighten($brand-second-color, 25%);
+		}
+
+		td {
+			max-height: 35px;
+			padding-right: 60px;
+			border-bottom: solid 1px $color-dark;
+
+			h3 {
+				margin: 5px;
+				color: $font-color;
+				font-weight: $font-bold;
+			}
+		}
 	}
 }
