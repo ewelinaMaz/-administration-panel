@@ -62,6 +62,8 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    responsive: 'true',
+    maintainAspectRatio: 'true',
     legend: {
       display: true,
       labels: {
@@ -71,19 +73,11 @@ var myChart = new Chart(ctx, {
     },
     layout: {
       padding: {
-        left: 60,
-        right: 60,
+        left: 20,
+        right: 20,
         top: 20,
-        bottom: 20
+        bottom: 20,
       }
-    },
-    title: {
-      display: true,
-      text: 'Earnings chart',
-      fontStyle: 'bold',
-      fontSize: 24,
-      fontFamily: '$brand-font',
-      fontColor: '$font-color',
     },
     animation: {
       easing: 'easeInOutBack',
@@ -96,4 +90,13 @@ var myChart = new Chart(ctx, {
       }]
     }
   }
+});
+
+function toggleMenu(visible) {
+  document.querySelector('.menu').classList.toggle('show', visible)
+}
+
+document.querySelector('.hamburger').addEventListener('click', function(e) {
+  e.preventDefault();
+  toggleMenu()
 });

@@ -1,0 +1,131 @@
+/*------------------------------------------------------------------------*/
+/*Aside*/
+
+.fa-bars {
+	position: relative;
+	display: inline-block;
+	color: $color-light;
+	cursor: pointer;
+	margin-top: 23px;
+	left: 8%;
+	font-size: 25px;
+	padding-top: 5px;
+	z-index: 1035;
+	text-align: center;
+}
+
+aside {
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 200px;
+	float: left;
+	background: $color-dark;
+	color: $font-color;
+	z-index: 1032;
+
+	.title {
+		color: $color-light;
+		font-family: $brand-second-font;
+		font-weight: 400;
+		display: inline-block;
+		margin-left: 5px;
+	}
+
+	ul {
+		@include flex(column, center, space-around);
+		padding-inline-start: 0;
+		margin-bottom: 20px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid $color-dark;
+		margin-left: 10px;
+
+		li {
+			list-style: none;
+			height: 60px;
+			width: 100%;
+			align-items: center;
+			@include flex(row, center, flex-start);
+			cursor: pointer;
+
+			&::before {
+				position: absolute;
+				display: block;
+				content: '';
+				left: 0;
+				top: 5;
+				align-content: center;
+				width: 5%;
+				height: 60px;
+				background-color: $brand-second-color;
+				opacity: 0;
+			}
+
+			&:hover::before {
+				opacity: 1;
+			}
+
+			&:hover {
+				background: lighten($color-dark, 10%);
+				color: $color-light;
+				i {
+					color: $color-light;
+				}
+			}
+
+			i {
+				margin-left: 5px;
+				margin-top: 5px;
+				padding: 0 2px;
+				float: left;
+				display: inline-block;
+				font-size: 18px;
+				color: $font-color;
+			}
+		}
+
+		h3 {
+			display: inline-block;
+			margin-left: 15px;
+		}
+	}
+
+	/* Comunication section */
+
+	.manager {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		position: relative;
+
+		.managerImg {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: $brand-main-color;
+		}
+
+		.circleManager {
+			bottom: 1%;
+			left: 29%;
+			background-color: #04ae00;
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.show {
+		display: none;
+	}
+	.title {
+		display: none;
+	}
+
+}
+@media (max-width: 767px) {
+	.show {
+		display: none;
+	}
+	.title {
+		display: none;
+	}
+}

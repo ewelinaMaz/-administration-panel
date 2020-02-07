@@ -1,0 +1,130 @@
+/*------------------------------------------------------------------------*/
+/* header */
+.header-section {
+	max-height: 80px;
+	top: 0;
+	position: fixed;
+	width: 100vw;
+	right: 0;
+	z-index: 1030;
+}
+
+header {
+	background-color: $color-light;
+	color: $font-color;
+	@include flex(row, center, flex-end);
+
+	.header_item-md {
+		position: relative;
+		display: block;
+		border-left: 1px solid $font-color;
+		height: 80px;
+
+		&:hover {
+			background: darken($color-light, 8%);
+			transition: $transition;
+		}
+
+		.item {
+			text-align: center;
+			display: inline-block;
+			height: 80px;
+			width: 30px;
+			font-size: 24px;
+			font-weight: $font-bold;
+			color: $font-color;
+			margin-top: 20px;
+			margin-left: 15px;
+		}
+
+		.item-text {
+			position: absolute;
+			display: inline-block;
+			text-align: center;
+			margin-left: 15px;
+		}
+
+		.amount {
+			font-size: 21px;
+		}
+
+		.icon-arrow-down {
+			float: right;
+			bottom: 10%;
+			width: 30px;
+			margin-right: 5px;
+		}
+	}
+
+	.header_item-sm {
+		position: relative;
+		display: block;
+		border-left: 1px solid $font-color;
+		border-right: none;
+		height: 80px;
+
+		&:hover {
+			background: darken($color-light, 8%);
+			transition: $transition;
+		}
+
+		i {
+			position: absolute;
+			@include center;
+			font-size: 24px;
+			cursor: pointer;
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.header-section {
+		width: 60px;
+		height: 100vh;
+		@include flex (column, flex-start, flex-start);
+
+		header {
+			width: 60px;
+			height: 100vh;
+			@include flex (column, flex-start, flex-start);
+
+			.header_item-md {
+				flex-direction: column-reverse;
+
+				.item {
+					font-size: 16px;
+					width: 20px;
+				}
+
+				.item-text {
+					display: none;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.header-section {
+		width: 60px;
+		height: 100vh;
+		@include flex (column, flex-start, flex-start);
+
+		header {
+			width: 60px;
+			height: 100vh;
+			@include flex (column, flex-start, flex-start);
+
+			.header_item-md {
+				flex-direction: column-reverse;
+
+				.item {
+					font-size: 16px;
+					width: 20px;
+				}
+
+				.item-text {
+					display: none;
+				}
+			}
+		}
+	}
+}

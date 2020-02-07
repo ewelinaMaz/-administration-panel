@@ -14,56 +14,57 @@
 </head>
 
 <body>
-	<div class="header-section">
+	<div class="header-section ">
 		<header>
 			<div class="col-2 header_item-md">
-				<img class="item" src="images/icons/wallet.svg" alt="">
-				<h2 class="total-amout item">1,5000.00</h2>
-				<img class="item arrow" src="images/icons/arrow-down.svg" alt="">
+				<i class="icon-wallet item"></i>
+				<h3 class="item-text amount">1,5000.00</h3>
+				<i class="icon-arrow-down item"></i>
 			</div>
 			<div class="col-1 header_item-sm">
-				<img src="images/icons/notification.svg" alt="">
+				<i class="icon-notification"></i>
+				<div class="circle"></div>
 			</div>
 			<div class="col-2 header_item-md">
-				<img class="item" src="images/icons/profile.svg" alt="">
-				<h3 class="name item">Ewelina Mazurek</h3>
+				<i class="item icon-profile"></i>
+				<h3 class="item-text">Ewelina Mazurek</h3>
 			</div>
 			<div class="col-1 header_item-sm">
-				<img src="vendor/icons/quit.svg" alt="">
+				<i class="icon-quit"></i>
 			</div>
 		</header>
 	</div>
-	<aside>
+	<i class="fas fa-bars hamburger"></i>
+	<aside class="menu show">
 		<h2 class="title">Just do it</h2>
-		<button class="navbar" type="button" data-toggle="collapse"><i class="fas fa-bars"></i></button>
-		<div class="nav-wrapper">
+		<div class="nav-wrapper" togglable="true">
 			<ul>
 				<li>
-					<img src="images/icons/general.svg" alt="">
+					<i class="icon-general"></i>
 					<h3 class="nav-link">General</h3>
 				</li>
 				<li>
-					<img src="images/icons/details.svg" alt="">
+					<i class="icon-details"></i>
 					<h3 class="nav-link">Details</h3>
 				</li>
 				<li>
-					<img src="images/icons/links.svg" alt="">
+					<i class="icon-links"></i>
 					<h3 class="nav-link">Links</h3>
 				</li>
 				<li>
-					<img src="images/icons/banners.svg" alt="">
+					<i class="icon-banners"></i>
 					<h3 class="nav-link">Banners</h3>
 				</li>
 				<li>
-					<img src="images/icons/personaldata.svg" alt="">
+					<i class="icon-personaldata"></i>
 					<h3 class="nav-link">Personal data</h3>
 				</li>
 				<li>
-					<img src="images/icons/payout.svg" alt="">
+					<i class="icon-payout"></i>
 					<h3 class="nav-link">Payout</h3>
 				</li>
 				<li>
-					<img src="images/icons/postback.svg" alt="">
+					<i class="icon-postback"></i>
 					<h3 class="nav-link">Postback</h3>
 				</li>
 			</ul>
@@ -91,127 +92,147 @@
 				<div class="img-calendar">
 					<img class="calendar-icon" src="images/icons/calendar.svg">
 				</div>
-				<button class="main"><img src="images/icons/refresh.svg"></button>
+				<button class="main"><i class="fas fa-redo"></i></button>
 			</div>
 			<div class="row data-table">
-				<div class="col-4 data"><h2>Visit Signups
-				</h2>
-				<p>124</p>
-			</div>
-				<div class="col-4 data"><h2>FTD
-				</h2>
-				<p>445</p>
-			</div>
+				<div class="col-4 data">
+					<h2>Visit Signups
+					</h2>
+					<p>124</p>
+				</div>
+				<div class="col-4 data">
+					<h2>FTD
+					</h2>
+					<p>445</p>
+				</div>
 
-				<div class="col-4 data"><h2>Net deposit
-				</h2>
-				<p>564</p>
-			</div>
+				<div class="col-4 data">
+					<h2>Net deposit
+					</h2>
+					<p>564</p>
+				</div>
 
-				<div class="col-4 data"><h2>Turn over
-				</h2>
-				<p>432</p>
+				<div class="col-4 data">
+					<h2>Turn over
+					</h2>
+					<p>432</p>
+				</div>
 			</div>
+			<h2 class="title">Earnings chart</h2>
+			<div class="chart-row">
+				<canvas id="myChart" width="400" height="100"></canvas>
 			</div>
-
-		<div class="chart row">
-			<canvas id="myChart" width="75vw" height="15vh"></canvas>
-		</div>
 		</div>
 	</section>
 	<section class="links">
 		<div class="container">
 			<h2 class="section-title">LINKS</h2>
-			<div class="row">
-			<button class="add">+ add new</button>
-		</div>
-			<div class="table-row">
-				<table>
-				<tbody>
-					<tr>
-						<td><h3>Home page</h3></td>
-						<td><a href="http://www.homepage.com">http://www.homepage.com</a>
-						</td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td><h3>Currently offer</h3></td>
-						<td><a href="http://www.homepage.com">http://www.currently.com</a>
-						</td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td><h3>Blurpix</h3></td>
-						<td><a href="http://www.homepage.com">http://www.homepage.com</a>
-						</td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td><h3>Your Site</h3>
-						</td>
-						<td><a href="http://www.homepage.com">http://www.yoursite.com</a>
-						</td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td><h3>Google</h3>
-						</td>
-						<td><a href="http://www.homepage.com">http://www.google.com</a>
-						</td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td><h3>Facebook</h3>
-						</td>
-						<td><a href="http://www.homepage.com">http://www.facebook.com</a>
-						</td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td><h3>Dashboard</h3>
-						</td>
-						<td><a href="http://www.homepage.com">http://www.dashboard.com</a>
-						</td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td><h3>Blurax</h3>
-						</td>
-						<td><a href="http://www.homepage.com">http://www.blurax.com</a>
-						</td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td><h3>Piece of Wine</h3>
-						</td>
-						<td><a href="http://www.homepage.com">http://www.wine.com</a>
-						</td>
-						<td>
-						</td>
-					</tr>
-					<tr>
-						<td><h3>Twitter</h3>
-						</td>
-						<td><a href="http://www.homepage.com">http://www.twitter.com</a>
-						</td>
-						<td>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="row-button">
+				<button class="add">+ add new</button>
 			</div>
-			<button class="add">+ add new</button>
+			<div class="table-row scroll-wrapper">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<h3>Home page</h3>
+							</td>
+							<td><a href="http://www.homepage.com">http://www.homepage.com</a>
+							</td>
+							<td><i class="fas fa-link"></i><i class="far fa-trash-alt"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Currently offer</h3>
+							</td>
+							<td><a href="http://www.homepage.com">http://www.currently.com</a>
+							</td>
+							<td><i class="fas fa-link"></i><i class="far fa-trash-alt"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Blurpix</h3>
+							</td>
+							<td><a href="http://www.homepage.com">http://www.homepage.com</a>
+							</td>
+							<td><i class="fas fa-link"></i><i class="far fa-trash-alt"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Your Site</h3>
+							</td>
+							<td><a href="http://www.homepage.com">http://www.yoursite.com</a>
+							</td>
+							<td><i class="fas fa-link"></i><i class="far fa-trash-alt"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Google</h3>
+							</td>
+							<td><a href="http://www.homepage.com">http://www.google.com</a>
+							</td>
+							<td><i class="fas fa-link"></i><i class="far fa-trash-alt"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Facebook</h3>
+							</td>
+							<td><a href="http://www.homepage.com">http://www.facebook.com</a>
+							</td>
+							<td><i class="fas fa-link"></i><i class="far fa-trash-alt"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Dashboard</h3>
+							</td>
+							<td><a href="http://www.homepage.com">http://www.dashboard.com</a>
+							</td>
+							<td><i class="fas fa-link"></i><i class="far fa-trash-alt"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Blurax</h3>
+							</td>
+							<td><a href="http://www.homepage.com">http://www.blurax.com</a>
+							</td>
+							<td><i class="fas fa-link"></i><i class="far fa-trash-alt"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Piece of Wine</h3>
+							</td>
+							<td><a href="http://www.homepage.com">http://www.wine.com</a>
+							</td>
+							<td><i class="fas fa-link"></i><i class="far fa-trash-alt"></i>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>Twitter</h3>
+							</td>
+							<td><a href="http://www.homepage.com">http://www.twitter.com</a>
+							</td>
+							<td><i class="fas fa-link"></i><i class="far fa-trash-alt"></i>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="row-button">
+				<button class="add">+ add new</button>
+			</div>
 		</div>
 	</section>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
 	<script src="js/script.js"></script>
 </body>
+
 </html>

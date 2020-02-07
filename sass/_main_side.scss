@@ -1,161 +1,10 @@
-/* header */
-.header-section {
-	height: 80px;
-	margin-top: 0;
-	margin-left: 200px;
-}
-
-header {
-	height: 80px;
-	background-color: $color-light;
-	color: $font-color;
-	@include flex(row, center, flex-end);
-
-	.header_item-md {
-		position: relative;
-		display: block;
-		border: 1px solid $font-color;
-		border-right: none;
-		height: 80px;
-
-		&:hover {
-			background: darken($color-light, 8%);
-			transition: $transition;
-		}
-
-		.item {
-			align-items: center;
-			display: inline-block;
-			height: 80px;
-			margin: 0 10px;
-		}
-
-		.total-amout {
-			position: absolute;
-			padding-top: 20px;
-		}
-
-		.name {
-			position: absolute;
-			padding-top: 20px;
-		}
-
-		.arrow {
-			float: right;
-			fill: $font-color;
-			width: 25px;
-		}
-	}
-
-	.header_item-sm {
-		position: relative;
-		display: block;
-		border: 1px solid $font-color;
-		border-right: none;
-		height: 80px;
-
-		&:hover {
-			background: darken($color-light, 8%);
-			transition: $transition;
-		}
-
-		img {
-			position: absolute;
-			@include center;
-			cursor: pointer;
-		}
-	}
-}
-/*------------------------------------------------------------------------*/
-/*Aside*/
-aside {
-	position: fixed;
-	top: 0;
-	height: 100vh;
-	width: 200px;
-	float: left;
-	background: $color-dark;
-	color: $font-color;
-
-	.title {
-		color: $color-light;
-		font-family: $brand-second-font;
-		font-weight: 400;
-		display: inline-block;
-	}
-
-	button {
-		display: inline-block;
-		background-color: $color-dark;
-		color: $color-light;
-		border-radius: 10%;
-		border-color: $font-color;
-		cursor: pointer;
-		margin-left: 70px;
-		width: 30px;
-		height: 30px;
-		line-height: 30px;
-		text-align: center;
-	}
-
-	ul {
-		@include flex(column, center, space-around);
-		padding-inline-start: 0;
-		margin-bottom: 20px;
-		padding-bottom: 5px;
-		border-bottom: 1px solid $font-color;
-		margin-left: 20px;
-
-		li {
-			list-style: none;
-			height: 50px;
-			width: 100%;
-			margin-bottom: 10px;
-			align-items: center;
-			@include flex(row, center, flex-start);
-			cursor: pointer;
-
-			&:hover {
-				background: lighten($color-dark, 10%);
-				color: $color-light;
-			}
-
-			img {
-				float: left;
-				display: inline-block;
-				background-color: $font-color;
-				border-radius: 10%;
-			}
-		}
-
-		h3 {
-			display: inline-block;
-			margin-left: 15px;
-		}
-	}
-	/* Comunication section */
-	.manager {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		position: relative;
-
-		.managerImg {
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-			background-color: $brand-main-color;
-		}
-
-		.circleManager {
-			bottom: 1%;
-			left: 29%;
-			background-color: #04ae00;
-		}
-	}
-}
 /*------------------------------------------------------------------------*/
 /*Chart*/
+
+.chart {
+	margin-top: 110px;
+}
+
 .section-title {
 	border-bottom: 1px solid $font-color;
 	color: $font-color;
@@ -164,7 +13,17 @@ aside {
 
 .row {
 	justify-content: center;
+}
+
+.chart-row {
+	position: relative;
+	height: 50vh;
+	width: 60vw;
+	margin: 0 auto;
+	overflow: auto;
+}
 	/* Fake calendar */
+
 	.calendar {
 		display: inline-block;
 		border: 1px solid $font-color;
@@ -191,8 +50,9 @@ aside {
 			margin-top: 10px;
 		}
 	}
-}
+
 /* datasets */
+
 .data-table {
 	border-top: solid 1px $font-color;
 	margin: 40px 0 auto;
@@ -206,7 +66,6 @@ aside {
 		height: 50px;
 
 		h2 {
-
 			margin: 5px 20px;
 		}
 
@@ -218,7 +77,9 @@ aside {
 		}
 	}
 }
+
 /* button */
+
 .main {
 	display: block;
 	@include btn($brand-second-color, $color-light, $brand-second-color);
@@ -226,14 +87,27 @@ aside {
 	height: 50px;
 	width: 50px;
 	opacity: 0.8;
+	color: $color-light;
+	font-size: 24px;
 
 	&:hover {
 		background: darken($brand-second-color, 5%);
 	}
 }
+
 /*------------------------------------------------------------------------*/
 /*Links*/
+
+/* button */
+.row-button {
+	height:70px;
+	width: 100%;
+	position: relative;
+	margin-top: 35px;
+}
+
 .add {
+	position: absolute;
 	display: block;
 	@include btn($brand-second-color, $color-light, $brand-second-color);
 	margin-left: 20px;
@@ -246,22 +120,16 @@ aside {
 	}
 }
 
-table {
-	border-collapse: collapse;
-}
+/* Table */
 
 .table-row {
 	position: relative;
-	margin-top: 50px;
+	margin-top: 10px;
 
 	table {
 		@include flex(row, center, center);
 		margin: 0 30px;
-
-		tr:hover {
-			border: none;
-			background: lighten($brand-second-color, 25%);
-		}
+		border-collapse: collapse;
 
 		td {
 			max-height: 35px;
@@ -272,6 +140,26 @@ table {
 				margin: 5px;
 				color: $font-color;
 				font-weight: $font-bold;
+			}
+
+			.fa-link {
+				color: $brand-second-color;
+			}
+
+			i {
+				opacity: 0.1;
+				padding-left: 20px;
+				font-size: 16px;
+				cursor: pointer;
+			}
+		}
+
+		tr:hover {
+			border: none;
+			background: lighten($brand-second-color, 25%);
+			i {
+				opacity: 1;
+				transition: $transition;
 			}
 		}
 	}

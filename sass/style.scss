@@ -2,11 +2,13 @@
 @import 'mixins';
 @import 'normalize';
 @import 'layout';
+@import 'glyphter';
 /* components */
 @import 'components/form_field';
 /* Sections */
 @import 'section/registration_form';
 /* Pages / Views */
 @import 'main_side';
-@import 'calendar';
+@import 'aside';
+@import 'header';
 @import 'pages/registration';
