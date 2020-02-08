@@ -1,12 +1,11 @@
 /*------------------------------------------------------------------------*/
 /*Aside*/
-
 .fa-bars {
-	position: relative;
-	display: inline-block;
+	position: fixed;
+  top: 0;
+	margin-top: 22px;
 	color: $color-light;
 	cursor: pointer;
-	margin-top: 23px;
 	left: 8%;
 	font-size: 25px;
 	padding-top: 5px;
@@ -68,6 +67,7 @@ aside {
 			&:hover {
 				background: lighten($color-dark, 10%);
 				color: $color-light;
+
 				i {
 					color: $color-light;
 				}
@@ -112,20 +112,47 @@ aside {
 		}
 	}
 }
+
+/*--------------------------------------------------------------------------/
+/* Media query */
+
 @media (min-width: 768px) and (max-width: 991px) {
-	.show {
-		display: none;
+	.fa-bars {
+		color: $brand-second-color;
+		position: fixed;
 	}
-	.title {
+
+	.show {
 		display: none;
 	}
 
+	.menu {
+		height: 100vh;
+	}
+
+	aside .title {
+		margin-left: 70px;
+		margin-bottom: 0;
+	}
 }
+
 @media (max-width: 767px) {
+	.fa-bars {
+		color: $brand-second-color;
+		position: fixed;
+		top:-1%;
+	}
+
 	.show {
 		display: none;
 	}
-	.title {
-		display: none;
+
+	.menu {
+		height: 100vh;
+	}
+
+	aside .title {
+		margin-left: 70px;
+		margin-bottom: 0;
 	}
 }

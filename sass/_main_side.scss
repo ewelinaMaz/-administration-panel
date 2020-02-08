@@ -1,6 +1,5 @@
 /*------------------------------------------------------------------------*/
 /*Chart*/
-
 .chart {
 	margin-top: 110px;
 }
@@ -21,38 +20,42 @@
 	width: 60vw;
 	margin: 0 auto;
 	overflow: auto;
+
+	canvas {
+		width: 60%;
+	}
 }
-	/* Fake calendar */
+/* Fake calendar */
+.calendar {
+	display: inline-block;
+	border: 1px solid $font-color;
+	border-right: none;
+	padding: 5px;
+	height: 50px;
+	text-align: center;
 
-	.calendar {
-		display: inline-block;
-		border: 1px solid $font-color;
-		border-right: none;
-		padding: 5px;
-		height: 50px;
-		text-align: center;
-
-		h2 {
-			margin: 0 auto;
-			color: $font-color;
-		}
+	h2 {
+		margin: 0 auto;
+		color: $font-color;
 	}
+}
 
-	.img-calendar {
-		display: inline-block;
-		width: 40px;
-		height: 50px;
-		border: 1px solid $font-color;
-		border-left: none;
+.img-calendar {
+	display: inline-block;
+	position: relative;
+	width: 40px;
+	height: 50px;
+	border: 1px solid $font-color;
+	border-left: none;
 
-		.calendar-icon {
-			width: 20px;
-			margin-top: 10px;
-		}
+	.icon-calendar {
+	  position: absolute;
+		@include center;
+		font-size: 18px;
+		color: $font-color;
 	}
-
+}
 /* datasets */
-
 .data-table {
 	border-top: solid 1px $font-color;
 	margin: 40px 0 auto;
@@ -77,9 +80,7 @@
 		}
 	}
 }
-
 /* button */
-
 .main {
 	display: block;
 	@include btn($brand-second-color, $color-light, $brand-second-color);
@@ -94,13 +95,11 @@
 		background: darken($brand-second-color, 5%);
 	}
 }
-
 /*------------------------------------------------------------------------*/
 /*Links*/
-
 /* button */
 .row-button {
-	height:70px;
+	height: 70px;
 	width: 100%;
 	position: relative;
 	margin-top: 35px;
@@ -119,9 +118,7 @@
 		background: darken($brand-second-color, 5%);
 	}
 }
-
 /* Table */
-
 .table-row {
 	position: relative;
 	margin-top: 10px;
@@ -157,9 +154,76 @@
 		tr:hover {
 			border: none;
 			background: lighten($brand-second-color, 25%);
+
 			i {
 				opacity: 1;
 				transition: $transition;
+			}
+		}
+	}
+}
+/*--------------------------------------------------------------------------/
+/* Media query */
+@media (min-width: 768px) and (max-width: 991px) {
+	@include grid('sm');
+
+	.chart {
+		margin-top: 0;
+	}
+
+	.container {
+		margin: 10px;
+	}
+}
+@media (max-width: 767px) {
+	@include grid('sm');
+
+	.chart {
+		margin-top: 0;
+
+		.container {
+			margin: 10px;
+			top: 0;
+			height: 100%;
+
+			.row {
+				@include flex(column, center, center);
+
+				.calendar {
+					border-right: 1px solid $font-color;
+					border-bottom: none;
+
+					h2 {
+						font-size: 18px;
+					}
+				}
+					.img-calendar {
+						border-left: 1px solid $font-color;
+						display: inline-block;
+						width: 93px;
+						height: 30px;
+
+						.icon-calendar {
+							font-size: 16px;
+						}
+					}
+					.main {
+						width: 30px;
+						height: 30px;
+						line-height: 30px;
+						margin-top: 15px;
+						position: relative;
+						margin-left: 0;
+
+						.fa-redo {
+							font-size: 16px;
+							position: absolute;
+							@include center;
+						}
+					}
+			}
+			.data-table h2 {
+				font-size: 16px;
 			}
 		}
 	}
