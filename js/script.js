@@ -30,7 +30,6 @@ var myChart = new Chart(ctx, {
         'rgba(255, 99, 132, 1)',
         'rgba(255, 99, 132, 1)',
       ],
-      borderWidth: 0.2
     }, {
       label: 'FTD',
       data: [419, 189, 286, 312, 380, 203, 390, 387, 420, 256],
@@ -58,25 +57,16 @@ var myChart = new Chart(ctx, {
         'rgba(128, 106, 106, 1)',
         'rgba(128, 106, 106, 1)',
       ],
-      borderWidth: 0.2
     }]
   },
   options: {
     responsive: 'true',
-    maintainAspectRatio: 'true',
+    maintainAspectRatio: 'false',
     legend: {
       display: true,
       labels: {
         usePointStyle: 'true',
         fontFamily: '$brand-font',
-      }
-    },
-    layout: {
-      padding: {
-        left: 20,
-        right: 20,
-        top: 20,
-        bottom: 20,
       }
     },
     animation: {

@@ -799,14 +799,17 @@ body {
 
 .chart-row {
   position: relative;
-  height: 50vh;
-  width: 60vw;
+  height: 60vh;
+  width: 70vw;
   margin: 0 auto;
   overflow: auto;
 }
 
 .chart-row canvas {
-  width: 60%;
+  position: absolute;
+  max-width: 900px;
+  max-height: 330px;
+  right: 12% !important;
 }
 
 /* Fake calendar */
@@ -1004,62 +1007,62 @@ body {
 /*--------------------------------------------------------------------------/
 /* Media query */
 @media (min-width: 768px) and (max-width: 991px) {
-  .col-sm-1 {
+  .col-md-1 {
     -ms-flex: 0 0 8.33333%;
         flex: 0 0 8.33333%;
     max-width: 8.33333%;
   }
-  .col-sm-2 {
+  .col-md-2 {
     -ms-flex: 0 0 16.66667%;
         flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
-  .col-sm-3 {
+  .col-md-3 {
     -ms-flex: 0 0 25%;
         flex: 0 0 25%;
     max-width: 25%;
   }
-  .col-sm-4 {
+  .col-md-4 {
     -ms-flex: 0 0 33.33333%;
         flex: 0 0 33.33333%;
     max-width: 33.33333%;
   }
-  .col-sm-5 {
+  .col-md-5 {
     -ms-flex: 0 0 41.66667%;
         flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
-  .col-sm-6 {
+  .col-md-6 {
     -ms-flex: 0 0 50%;
         flex: 0 0 50%;
     max-width: 50%;
   }
-  .col-sm-7 {
+  .col-md-7 {
     -ms-flex: 0 0 58.33333%;
         flex: 0 0 58.33333%;
     max-width: 58.33333%;
   }
-  .col-sm-8 {
+  .col-md-8 {
     -ms-flex: 0 0 66.66667%;
         flex: 0 0 66.66667%;
     max-width: 66.66667%;
   }
-  .col-sm-9 {
+  .col-md-9 {
     -ms-flex: 0 0 75%;
         flex: 0 0 75%;
     max-width: 75%;
   }
-  .col-sm-10 {
+  .col-md-10 {
     -ms-flex: 0 0 83.33333%;
         flex: 0 0 83.33333%;
     max-width: 83.33333%;
   }
-  .col-sm-11 {
+  .col-md-11 {
     -ms-flex: 0 0 91.66667%;
         flex: 0 0 91.66667%;
     max-width: 91.66667%;
   }
-  .col-sm-12 {
+  .col-md-12 {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -1067,8 +1070,80 @@ body {
   .chart {
     margin-top: 0;
   }
-  .container {
-    margin: 10px;
+  .chart .container {
+    top: 0;
+    margin: 5px;
+    margin-top: 10px;
+    height: 100%;
+    width: 85vw;
+    float: left;
+  }
+  .chart .container .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .chart .container .row .calendar h2 {
+    font-size: 18px;
+  }
+  .chart .container .row .img-calendar {
+    display: inline-block;
+  }
+  .chart .container .row .img-calendar .icon-calendar {
+    font-size: 16px;
+  }
+  .chart .container .row .main {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    margin-left: 15px;
+  }
+  .chart .container .row .main .fa-redo {
+    font-size: 16px;
+    position: absolute;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .chart .container .data h2, .chart .container p {
+    font-size: 14px;
+  }
+  .chart .container .chart-row canvas {
+    width: 500px !important;
+    font-size: 14px;
+    height: 300px !important;
+    left: 3% !important;
+    top: 10% !important;
+  }
+  .links .container {
+    top: 0;
+    margin: 5px;
+    margin-top: 10px;
+    height: 100%;
+    width: 85vw;
+    float: left;
+  }
+  .links .container .row-button {
+    max-height: 50px;
+  }
+  .links .container .row-button .add {
+    font-size: 14px;
+  }
+  .links .container .scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .links .container .scroll-wrapper td {
+    clear: left;
+    float: left;
+    width: 100%;
   }
 }
 
@@ -1137,9 +1212,11 @@ body {
     margin-top: 0;
   }
   .chart .container {
-    margin: 10px;
     top: 0;
+    margin-top: 10px;
     height: 100%;
+    width: 80vw;
+    float: left;
   }
   .chart .container .row {
     display: -ms-flexbox;
@@ -1183,8 +1260,37 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  .chart .container .data-table h2 {
-    font-size: 16px;
+  .chart .container .data h2, .chart .container .data p {
+    font-size: 14px;
+  }
+  .chart .container .chart-row canvas {
+    transform: rotate(90deg) !important;
+    width: 350px !important;
+    font-size: 14px;
+    height: 200px !important;
+    top: 20% !important;
+    right: -10% !important;
+  }
+  .links .container {
+    height: 100%;
+    width: 80vw;
+    float: left;
+    margin-top: 10px;
+  }
+  .links .container .row-button {
+    max-height: 50px;
+  }
+  .links .container .row-button .add {
+    font-size: 14px;
+  }
+  .links .container .scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .links .container .scroll-wrapper td {
+    clear: left;
+    float: left;
+    width: 100%;
   }
 }
 
@@ -1323,7 +1429,7 @@ aside .manager .circleManager {
 
 /*--------------------------------------------------------------------------/
 /* Media query */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1100px) {
   .fa-bars {
     color: #E77B7E;
     position: fixed;
@@ -1361,7 +1467,7 @@ aside .manager .circleManager {
 /*------------------------------------------------------------------------*/
 /* header */
 .header-section {
-  max-height: 80px;
+  height: 80px;
   top: 0;
   position: fixed;
   width: 100vw;
@@ -1449,73 +1555,20 @@ header .header_item-sm i {
 
 /*--------------------------------------------------------------------------/
 /* Media query */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 1200px) {
   .header-section {
-    width: 60px;
-    height: 100vh;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-align: start;
-        align-items: flex-start;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
+    right: 5%;
   }
-  .header-section header {
-    width: 60px;
-    height: 100vh;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-align: start;
-        align-items: flex-start;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-  }
-  .header-section header .header_item-md {
-    position: absolute;
-    -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-    width: 60px;
-    text-align: center;
-  }
-  .header-section header .header_item-md .item {
-    font-size: 16px;
-    width: 20px;
-    height: 20px;
-  }
-  .header-section header .header_item-md .icon-arrow-down {
-    transform: rotate(90deg);
-  }
-  .header-section header .header_item-md .item-text {
-    display: none;
-  }
-  .header-section header .header_item-sm {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    position: absolute;
-    width: 60px;
-    text-align: center;
-  }
-  .header-section header .header_item-sm .icon-notification {
-    font-size: 16px;
-    width: 20px;
-    text-align: center;
-  }
-  .header-section header .header_item-sm .icon-quit {
-    font-size: 16px;
-    width: 20px;
-    text-align: center;
+  .header-section .header_item-md {
+    min-width: 240px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .header-section {
     width: 60px;
     height: 100vh;
-    margin-top: 10px;
+    top: 1%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1546,15 +1599,15 @@ header .header_item-sm i {
         align-items: center;
     -ms-flex-pack: center;
         justify-content: center;
-    width: 100%;
-    height: 80px;
+    min-width: 60px;
     border-left: none;
+    max-height: 80px;
   }
   .header-section header .header_item-md .item {
     font-size: 16px;
     width: 20px;
     height: 20px;
-    margin: 10px 10px;
+    margin: 10px;
   }
   .header-section header .header_item-md .icon-arrow-down {
     transform: rotate(90deg);
@@ -1571,7 +1624,7 @@ header .header_item-sm i {
         align-items: center;
     -ms-flex-pack: center;
         justify-content: center;
-    width: 100%;
+    min-width: 60px;
     height: 40px;
     border-left: none;
   }

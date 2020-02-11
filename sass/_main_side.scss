@@ -16,13 +16,16 @@
 
 .chart-row {
 	position: relative;
-	height: 50vh;
-	width: 60vw;
+	height: 60vh;
+	width: 70vw;
 	margin: 0 auto;
 	overflow: auto;
 
 	canvas {
-		width: 60%;
+		position: absolute;
+		max-width: 900px;
+		max-height: 330px;
+		right: 12% !important;
 	}
 }
 /* Fake calendar */
@@ -49,7 +52,7 @@
 	border-left: none;
 
 	.icon-calendar {
-	  position: absolute;
+		position: absolute;
 		@include center;
 		font-size: 18px;
 		color: $font-color;
@@ -165,16 +168,94 @@
 /*--------------------------------------------------------------------------/
 /* Media query */
 @media (min-width: 768px) and (max-width: 991px) {
-	@include grid('sm');
+	@include grid('md');
 
 	.chart {
 		margin-top: 0;
+
+		.container {
+			top: 0;
+			margin: 5px;
+			margin-top: 10px;
+			height: 100%;
+			width: 85vw;
+			float: left;
+
+			.row {
+				@include flex(row, center, center);
+
+				.calendar h2 {
+						font-size: 18px;
+				}
+
+				.img-calendar {
+					display: inline-block;
+
+					.icon-calendar {
+						font-size: 16px;
+					}
+				}
+
+				.main {
+					width: 35px;
+					height: 35px;
+					line-height: 35px;
+					position: relative;
+					margin-left: 15px;
+
+					.fa-redo {
+						font-size: 16px;
+						position: absolute;
+						@include center;
+					}
+				}
+			}
+
+			.data	h2,	p {
+					font-size: 14px;
+				}
+
+			.chart-row canvas {
+				width: 500px !important;
+				font-size: 14px;
+				height: 300px !important;
+				left: 3% !important;
+				top: 10% !important;
+			}
+		}
 	}
 
-	.container {
-		margin: 10px;
+	.links {
+		.container {
+			top: 0;
+			margin: 5px;
+			margin-top: 10px;
+			height: 100%;
+			width: 85vw;
+			float: left;
+
+			.row-button {
+				max-height: 50px;
+
+				.add {
+					font-size: 14px;
+				}
+			}
+
+			.scroll-wrapper {
+				overflow-x: auto;
+				overflow-y: hidden;
+
+				td {
+					clear: left;
+					float: left;
+					width: 100%;
+				}
+			}
+		}
 	}
 }
+
 @media (max-width: 767px) {
 	@include grid('sm');
 
@@ -182,9 +263,11 @@
 		margin-top: 0;
 
 		.container {
-			margin: 10px;
 			top: 0;
+			margin-top: 10px;
 			height: 100%;
+			width: 80vw;
+			float: left;
 
 			.row {
 				@include flex(column, center, center);
@@ -197,33 +280,77 @@
 						font-size: 18px;
 					}
 				}
-					.img-calendar {
-						border-left: 1px solid $font-color;
-						display: inline-block;
-						width: 93px;
-						height: 30px;
 
-						.icon-calendar {
-							font-size: 16px;
-						}
-					}
-					.main {
-						width: 30px;
-						height: 30px;
-						line-height: 30px;
-						margin-top: 15px;
-						position: relative;
-						margin-left: 0;
+				.img-calendar {
+					border-left: 1px solid $font-color;
+					display: inline-block;
+					width: 93px;
+					height: 30px;
 
-						.fa-redo {
-							font-size: 16px;
-							position: absolute;
-							@include center;
-						}
+					.icon-calendar {
+						font-size: 16px;
 					}
+				}
+
+				.main {
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+					margin-top: 15px;
+					position: relative;
+					margin-left: 0;
+
+					.fa-redo {
+						font-size: 16px;
+						position: absolute;
+						@include center;
+					}
+				}
 			}
-			.data-table h2 {
-				font-size: 16px;
+
+			.data {
+
+				h2, p {
+					font-size: 14px;
+
+				}
+			}
+
+			.chart-row canvas {
+				transform: rotate(90deg) !important;
+				width: 350px !important;
+				font-size: 14px;
+				height: 200px !important;
+				top: 20% !important;
+				right: -10% !important;
+			}
+		}
+	}
+
+	.links {
+		.container {
+			height: 100%;
+			width: 80vw;
+			float: left;
+			margin-top: 10px;
+
+			.row-button {
+				max-height: 50px;
+
+				.add {
+					font-size: 14px;
+				}
+			}
+
+			.scroll-wrapper {
+				overflow-x: auto;
+				overflow-y: hidden;
+
+				td {
+					clear: left;
+					float: left;
+					width: 100%;
+				}
 			}
 		}
 	}
