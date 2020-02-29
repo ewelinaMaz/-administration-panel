@@ -1,0 +1,122 @@
+.active {
+	display: none;
+}
+.form-wrapper {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 2;
+	cursor: pointer;
+	overflow: auto;
+}
+
+.form {
+	position: relative;
+	left: 15%;
+	top: 15%;
+	z-index: 3;
+}
+
+.form-title {
+	width: 80%;
+
+}
+.js-close-form {
+  float: right;
+	font-size: 24px;
+	margin-right: 15px;
+}
+
+.row-form {
+	@include flex(row, space-between, space-between);
+}
+.form-container {
+	@include flex(column, center, center);
+	border-bottom: 1px solid $font-color;
+	margin-bottom: 15px;
+	width: 80vw;
+}
+
+.field {
+	background: $color-light;
+	height: 100%;
+	width: 80vw;
+
+	button {
+		@include center;
+		margin-left: 0;
+		margin-top: 0 auto;
+	}
+	.row-contact {
+		@include flex(row, center, space-between);
+		width: 800px;
+		height: 50px;
+		margin: 10px 0;
+
+		label {
+			font-family: $font-normal;
+			font-size: 20px;
+			font-weight: $font-bold;
+			color: $font-color;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+	.form {
+		left: 5%;
+	}
+
+	.form-container {
+		width: 100%;
+		height: 100%;
+		margin-bottom: 5px;
+
+		.row-contact {
+			width: 400px;
+			height: 40px;
+
+			input {
+				height: 22px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	@include grid('sm');
+	.form {
+		left: 2%;
+	}
+
+	.form-title {
+		font-size: 18px;
+	}
+
+	.js-close-form {
+		margin-right: 20px;
+	}
+	.form-container {
+		width: 100%;
+		height: 100%;
+
+		.row-contact {
+			width: 230px;
+			margin: 0 auto;
+
+			input {
+				height: auto;
+				width: auto;
+			}
+			label {
+				font-size: 14px;
+				margin-right: 5px;
+			}
+		}
+	}
+}
