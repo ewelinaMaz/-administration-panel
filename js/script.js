@@ -88,5 +88,55 @@ function toggleMenu(visible) {
 
 document.querySelector('.hamburger').addEventListener('click', function(e) {
   e.preventDefault();
-  toggleMenu()
+  toggleMenu();
+});
+
+function openForm(visible) {
+  document.querySelector('.form-wrapper').classList.toggle('active', visible);
+}
+
+document.querySelector('.popup').addEventListener('click', function(e) {
+  e.preventDefault();
+  openForm();
+  toggleMenu();
+});
+
+document.querySelector('.js-close-form', '.submit').addEventListener('click', function(e) {
+  e.preventDefault();
+  openForm();
+  toggleMenu();
+});
+
+
+function openModal() {
+  document.querySelector('.overlay').classList.add('show');
+  document.querySelector('.modal').classList.add('show');
+}
+document.querySelector('.modal_1').addEventListener('click',function(e){
+  e.preventDefault();
+  openModal();
+});
+
+function closeModal() {
+  document.querySelector('.overlay').classList.remove('show');
+  document.querySelector('.modal').classList.remove('show');
+}
+
+document.querySelectorAll('.js--close-modal').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    closeModal();
+  });
+});
+
+document.querySelector('.overlay').addEventListener('click', function(e) {
+  if(e.target === this) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keyup', function(e) {
+  if(e.keyCode === 27) {
+    closeModal();
+  }
 });

@@ -25,7 +25,7 @@
 				<i class="icon-notification"></i>
 				<div class="circle"></div>
 			</div>
-			<div class="col-md-2 header_item-md">
+			<div class="col-md-2 header_item-md modal_1">
 				<i class="item icon-profile"></i>
 				<h3 class="item-text">Ewelina Mazurek</h3>
 			</div>
@@ -55,7 +55,7 @@
 					<i class="icon-banners"></i>
 					<h3 class="nav-link">Banners</h3>
 				</li>
-				<li>
+				<li class="popup">
 					<i class="icon-personaldata"></i>
 					<h3 class="nav-link">Personal data</h3>
 				</li>
@@ -81,8 +81,87 @@
 
 	<section class="chart">
 		<div class="container">
+			<div class="form-wrapper active">
+				<form class="form" action="" method="POST">
+
+					<div class="field">
+						<div class="row-form">
+						<h2 class="section-title form-title">PERSONAL DATA</h2>
+						<div class="btn-close js-close-form">x</div>
+					</div>
+						<div class="form-container">
+							<div class="row-contact">
+								<label class="col-1">Name</label>
+								<input type="text" name="user-name" class="col-lg-6 col-sm-4">
+							</div>
+							<div class="row-contact">
+								<label class="col-1">Surname</label>
+								<input type="text" name="message" class="col-lg-6 col-sm-4">
+							</div>
+							<div class="row-contact">
+								<label class="col-1">E-mail</label>
+								<input type="e-mail" name="e-mail" class="col-lg-6 col-sm-4">
+							</div>
+							<div class="row-contact">
+								<label class="col-1">Phone number</label>
+								<input type="phone" name="phone" class="col-lg-6 col-sm-4">
+							</div>
+						</div>
+						<div class="form-container">
+							<div class="row-contact">
+								<label class="col-1">Skype</label>
+								<input type="text" name="skype" class="col-lg-6 col-sm-4">
+							</div>
+							<div class ="row-contact">
+								<label class="col-1">ICQ</label>
+								<input type="text" name="icq" class="col-lg-6 col-sm-4">
+							</div>
+							<div class ="row-contact">
+								<label class="col-1">Msn</label>
+								<input type="text" name="Msn" class="col-lg-6 col-sm-4">
+							</div>
+						</div>
+						<div class="form-container">
+							<div class="row-contact">
+								<label class="col-1">Wallet</label>
+								<input type="text" name="wallet" class="col-lg-6 col-sm-4">
+							</div>
+						</div>
+						<div class="form-container">
+							<div class="row-contact">
+								<label class="col-1">Password</label>
+								<input type="password" name="password" class="col-lg-6 col-sm-4">
+							</div>
+							<div class="row-contact">
+								<label class="col-1">Repeat</label>
+								<input type="password" name="password" class="col-lg-6 col-sm-4">
+							</div>
+						</div>
+						<div class="row-button">
+							<button class="add submit" type="submit">Save</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="overlay" id="modal_1">
+				<div class="modal" id="modal_1">
+					<div class="btn-close js--close-modal">x</div>
+
+					<h2 class="section-title">LOGIN</h2>
+					<div class="row-contact">
+						<input type="text" name="login" placeholder="login name" class="col-lg-4 col-sm-6">
+						<input type="password" name="password" placeholder="password" class="col-lg-4 col-sm-6">
+					</div>
+					<div class="row-button">
+						<button class="js--close-modal add">ENTER</button>
+					</div>
+				</div>
+			</div>
+
 			<h2 class="section-title">GENERAL STATISTIC</h2>
 			<div class="row">
+
 				<div class="col-lg-2 col-md-3 col-sm-7 calendar">
 					<h2>01.02.2020</h2>
 				</div>
