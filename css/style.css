@@ -1069,8 +1069,7 @@ body {
   }
   .chart .container {
     top: 0;
-    margin: 5px;
-    margin-top: 10px;
+    margin: 10px 5px 5px;
     height: 100%;
     width: 85vw;
     float: left;
@@ -1109,7 +1108,8 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  .chart .container .data h2, .chart .container p {
+  .chart .container .data h2,
+  .chart .container p {
     font-size: 14px;
   }
   .chart .container .chart-row canvas {
@@ -1121,8 +1121,7 @@ body {
   }
   .links .container {
     top: 0;
-    margin: 5px;
-    margin-top: 10px;
+    margin: 10px 5px 5px;
     height: 100%;
     width: 85vw;
     float: left;
@@ -1257,7 +1256,8 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  .chart .container .data h2, .chart .container .data p {
+  .chart .container .data h2,
+  .chart .container .data p {
     font-size: 14px;
   }
   .chart .container .chart-row canvas {
@@ -1432,7 +1432,7 @@ aside .manager .circleManager {
     position: fixed;
     left: 3%;
   }
-  .show {
+  .hide {
     display: none;
   }
   .menu {
@@ -1450,7 +1450,7 @@ aside .manager .circleManager {
     position: fixed;
     top: -1%;
   }
-  .show {
+  .hide {
     display: none;
   }
   .menu {

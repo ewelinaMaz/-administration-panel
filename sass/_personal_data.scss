@@ -1,6 +1,7 @@
 .active {
 	display: none;
 }
+
 .form-wrapper {
 	position: fixed;
 	width: 100%;
@@ -24,10 +25,10 @@
 
 .form-title {
 	width: 80%;
-
 }
+
 .js-close-form {
-  float: right;
+	float: right;
 	font-size: 24px;
 	margin-right: 15px;
 }
@@ -35,6 +36,7 @@
 .row-form {
 	@include flex(row, space-between, space-between);
 }
+
 .form-container {
 	@include flex(column, center, center);
 	border-bottom: 1px solid $font-color;
@@ -52,6 +54,7 @@
 		margin-left: 0;
 		margin-top: 0 auto;
 	}
+
 	.row-contact {
 		@include flex(row, center, space-between);
 		width: 800px;
@@ -66,7 +69,6 @@
 		}
 	}
 }
-
 @media (min-width: 768px) and (max-width: 1100px) {
 	.form {
 		left: 5%;
@@ -87,9 +89,9 @@
 		}
 	}
 }
-
 @media (max-width: 768px) {
 	@include grid('sm');
+
 	.form {
 		left: 2%;
 	}
@@ -101,6 +103,7 @@
 	.js-close-form {
 		margin-right: 20px;
 	}
+
 	.form-container {
 		width: 100%;
 		height: 100%;
@@ -113,6 +116,7 @@
 				height: auto;
 				width: auto;
 			}
+
 			label {
 				font-size: 14px;
 				margin-right: 5px;

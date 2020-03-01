@@ -175,8 +175,7 @@
 
 		.container {
 			top: 0;
-			margin: 5px;
-			margin-top: 10px;
+			margin: 10px 5px 5px;
 			height: 100%;
 			width: 85vw;
 			float: left;
@@ -185,7 +184,7 @@
 				@include flex(row, center, center);
 
 				.calendar h2 {
-						font-size: 18px;
+					font-size: 18px;
 				}
 
 				.img-calendar {
@@ -211,9 +210,10 @@
 				}
 			}
 
-			.data	h2,	p {
-					font-size: 14px;
-				}
+			.data h2,
+			p {
+				font-size: 14px;
+			}
 
 			.chart-row canvas {
 				width: 500px !important;
@@ -228,8 +228,7 @@
 	.links {
 		.container {
 			top: 0;
-			margin: 5px;
-			margin-top: 10px;
+			margin: 10px 5px 5px;
 			height: 100%;
 			width: 85vw;
 			float: left;
@@ -255,7 +254,6 @@
 		}
 	}
 }
-
 @media (max-width: 767px) {
 	@include grid('sm');
 
@@ -309,10 +307,9 @@
 			}
 
 			.data {
-
-				h2, p {
+				h2,
+				p {
 					font-size: 14px;
-
 				}
 			}
 

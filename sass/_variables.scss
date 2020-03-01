@@ -4,45 +4,38 @@ $brand-main-color: #806A6A;
 $brand-second-color: #E77B7E;
 $font-color: #535756;
 $color-light: #FFFFFF;
-
-
 /* Font sizes */
 $paragraph-font-size: 16px;
-
 /* Fonts */
 $brand-font: 'Nunito', sans-serif;
 $brand-second-font: 'Lobster', cursive;
 $paragraph-font: 'Comfortaa', cursive;
-
 $font-light: 300;
 $font-normal: 400;
 $font-semibold: 500;
 $font-bold: 700;
-
-$transition: all .3s;
+$transition: all 0.3s;
 $radius: 4px;
-
 /* Typography */
-
 .h1 {
-  font-family: $brand-font;
-  font-size: 26px;
-  font-weight: $font-semibold;
-  text-transform: uppercase;
+	font-family: $brand-font;
+	font-size: 26px;
+	font-weight: $font-semibold;
+	text-transform: uppercase;
 }
 
 .h2 {
 	font-family: $brand-font;
-  font-size: 20px;
-  font-weight: $font-bold;
-  text-transform: uppercase;
+	font-size: 20px;
+	font-weight: $font-bold;
+	text-transform: uppercase;
 }
 
 .h3 {
 	font-family: $brand-font;
-  font-size: 18px;
-  font-weight: $font-bold;
-  text-transform: uppercase;
+	font-size: 18px;
+	font-weight: $font-bold;
+	text-transform: uppercase;
 }
 
 li a {
@@ -50,8 +43,7 @@ li a {
 	color: darker($color-light, 10%);
 	font-weight: $font-normal;
 	cursor: pointer;
-	}
-
+}
 
 .circle {
 	position: absolute;
@@ -60,5 +52,5 @@ li a {
 	width: 9px;
 	height: 9px;
 	border-radius: 50%;
- 	background-color: #f58220;
+	background-color: #f58220;
 }

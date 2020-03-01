@@ -83,7 +83,7 @@ var myChart = new Chart(ctx, {
 });
 
 function toggleMenu(visible) {
-  document.querySelector('.menu').classList.toggle('show', visible)
+  document.querySelector('.menu').classList.toggle('hide', visible);
 }
 
 document.querySelector('.hamburger').addEventListener('click', function(e) {
@@ -112,7 +112,7 @@ function openModal() {
   document.querySelector('.overlay').classList.add('show');
   document.querySelector('.modal').classList.add('show');
 }
-document.querySelector('.modal_1').addEventListener('click',function(e){
+document.querySelector('.modal_1').addEventListener('click', function(e) {
   e.preventDefault();
   openModal();
 });
@@ -130,13 +130,13 @@ document.querySelectorAll('.js--close-modal').forEach(function(btn) {
 });
 
 document.querySelector('.overlay').addEventListener('click', function(e) {
-  if(e.target === this) {
+  if (e.target === this) {
     closeModal();
   }
 });
 
 document.addEventListener('keyup', function(e) {
-  if(e.keyCode === 27) {
+  if (e.keyCode === 27) {
     closeModal();
   }
 });

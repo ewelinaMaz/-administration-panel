@@ -2,7 +2,7 @@
 /*Aside*/
 .fa-bars {
 	position: fixed;
-  top: 0;
+	top: 0;
 	margin-top: 22px;
 	color: $color-light;
 	cursor: pointer;
@@ -89,9 +89,7 @@ aside {
 			margin-left: 15px;
 		}
 	}
-
 	/* Comunication section */
-
 	.manager {
 		display: flex;
 		justify-content: space-around;
@@ -112,10 +110,8 @@ aside {
 		}
 	}
 }
-
 /*--------------------------------------------------------------------------/
 /* Media query */
-
 @media (min-width: 768px) and (max-width: 1100px) {
 	.fa-bars {
 		color: $brand-second-color;
@@ -123,7 +119,7 @@ aside {
 		left: 3%;
 	}
 
-	.show {
+	.hide {
 		display: none;
 	}
 
@@ -141,10 +137,10 @@ aside {
 	.fa-bars {
 		color: $brand-second-color;
 		position: fixed;
-		top:-1%;
+		top: -1%;
 	}
 
-	.show {
+	.hide {
 		display: none;
 	}
 

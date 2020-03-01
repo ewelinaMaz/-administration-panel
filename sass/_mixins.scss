@@ -1,42 +1,39 @@
 @mixin btn($btn-bg, $btn-text, $btn-border) {
-  background: $btn-bg;
-  color: $btn-text;
-  border-color: $btn-border;
-  border-radius: $radius;
-  transition: $transition;
-  display: block;
-  border-width: 1px;
-  border-style: solid;
-  padding: 12px;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
+	background: $btn-bg;
+	color: $btn-text;
+	border-color: $btn-border;
+	border-radius: $radius;
+	transition: $transition;
+	display: block;
+	border-width: 1px;
+	border-style: solid;
+	padding: 12px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
 
 	&:hover {
-    background: darken($btn-bg, 5%);
-  }
+		background: darken($btn-bg, 5%);
+	}
 }
-
-	@mixin flex($flex-direction, $align-items, $justify-content) {
-	  display: flex;
-	  flex-direction: $flex-direction;
-	  align-items: $align-items;
-	  justify-content: $justify-content;
+@mixin flex($flex-direction, $align-items, $justify-content) {
+	display: flex;
+	flex-direction: $flex-direction;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+@mixin center() {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin grid($prefix) {
+	@for $i from 1 through 12 {
+		.col-#{$prefix}-#{$i} {
+			$width: 100% / 12 * $i;
+			flex: 0 0 $width;
+			max-width: $width;
+		}
 	}
-
-	@mixin center() {
-	  position: absolute;
-	  left: 50%;
-	  top: 50%;
-	  transform: translate(-50%, -50%);
-	}
-
-	@mixin grid($prefix) {
-  @for $i from 1 through 12 {
-    .col-#{$prefix}-#{$i} {
-      $width: 100% / 12 * $i;
-      flex: 0 0 $width;
-      max-width: $width;
-    }
-  }
 }
