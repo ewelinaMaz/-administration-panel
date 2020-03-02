@@ -80,7 +80,7 @@ header {
 /* Media query */
 @media (max-width: 1200px) {
 	.header-section {
-		right: 5%;
+		width: 100vw;
 
 		.header_item-md {
 			min-width: 240px;

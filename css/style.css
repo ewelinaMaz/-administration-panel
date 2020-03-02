@@ -397,6 +397,7 @@ body {
 .container {
   position: relative;
   max-width: 1400px;
+  width: 75vw;
   height: 900px;
   margin: 40px auto;
   padding: 10px 20px;
@@ -806,7 +807,10 @@ body {
   position: absolute;
   max-width: 900px;
   max-height: 400px;
-  right: 12% !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Fake calendar */
@@ -1003,6 +1007,15 @@ body {
 
 /*--------------------------------------------------------------------------/
 /* Media query */
+@media (max-width: 1100px) {
+  .container {
+    width: 85vw;
+  }
+  canvas {
+    top: 25% !important;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .col-md-1 {
     -ms-flex: 0 0 8.33333%;
@@ -1112,13 +1125,6 @@ body {
   .chart .container p {
     font-size: 14px;
   }
-  .chart .container .chart-row canvas {
-    width: 500px !important;
-    font-size: 14px;
-    height: 300px !important;
-    left: 3% !important;
-    top: 10% !important;
-  }
   .links .container {
     top: 0;
     margin: 10px 5px 5px;
@@ -1214,6 +1220,9 @@ body {
     width: 80vw;
     float: left;
   }
+  .chart .container .section-title {
+    font-size: 22px;
+  }
   .chart .container .row {
     display: -ms-flexbox;
     display: flex;
@@ -1262,11 +1271,7 @@ body {
   }
   .chart .container .chart-row canvas {
     transform: rotate(90deg) !important;
-    width: 350px !important;
-    font-size: 14px;
-    height: 200px !important;
-    top: 20% !important;
-    right: -10% !important;
+    left: 0%;
   }
   .links .container {
     height: 100%;
@@ -1299,7 +1304,8 @@ body {
   margin-top: 22px;
   color: #FFFFFF;
   cursor: pointer;
-  left: 8%;
+  left: 0%;
+  margin-left: 150px;
   font-size: 25px;
   padding-top: 5px;
   z-index: 1035;
@@ -1430,7 +1436,7 @@ aside .manager .circleManager {
   .fa-bars {
     color: #E77B7E;
     position: fixed;
-    left: 3%;
+    margin-left: 30px;
   }
   .hide {
     display: none;
@@ -1448,7 +1454,8 @@ aside .manager .circleManager {
   .fa-bars {
     color: #E77B7E;
     position: fixed;
-    top: -1%;
+    top: 0%;
+    margin-left: 20px;
   }
   .hide {
     display: none;
@@ -1555,7 +1562,7 @@ header .header_item-sm i {
 /* Media query */
 @media (max-width: 1200px) {
   .header-section {
-    right: 5%;
+    width: 100vw;
   }
   .header-section .header_item-md {
     min-width: 240px;

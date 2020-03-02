@@ -6,7 +6,8 @@
 	margin-top: 22px;
 	color: $color-light;
 	cursor: pointer;
-	left: 8%;
+	left: 0%;
+	margin-left: 150px;
 	font-size: 25px;
 	padding-top: 5px;
 	z-index: 1035;
@@ -116,7 +117,7 @@ aside {
 	.fa-bars {
 		color: $brand-second-color;
 		position: fixed;
-		left: 3%;
+		margin-left: 30px;
 	}
 
 	.hide {
@@ -137,7 +138,8 @@ aside {
 	.fa-bars {
 		color: $brand-second-color;
 		position: fixed;
-		top: -1%;
+		top: 0%;
+		margin-left: 20px;
 	}
 
 	.hide {
