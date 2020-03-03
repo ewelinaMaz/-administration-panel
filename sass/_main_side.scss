@@ -14,19 +14,17 @@
 	justify-content: center;
 }
 
-.chart-row {
-	position: relative;
-	height: 60vh;
-	width: 70vw;
-	margin: 0 auto;
-	overflow: auto;
+.title {
+	margin-top: 20px;
+	font-family: $paragraph-font;
+	font-size: 20px;
+	font-weight: $font-bold;
+	color: $font-color;
+}
 
-	canvas {
-		position: absolute;
-		max-width: 900px;
-		max-height: 400px;
-		@include center;
-	}
+canvas {
+	margin: 15px;
+	margin-top: 25px;
 }
 /* Fake calendar */
 .calendar {
@@ -68,17 +66,13 @@
 		@include flex(row, space-around, space-between);
 		border-bottom: solid 1px $font-color;
 		margin: 0 30px;
-		padding-left: 30px;
 		height: 50px;
-
-		h2 {
-			margin: 5px 20px;
-		}
 
 		p {
 			margin: 5px 20px;
-			font-size: 20px;
-			font-weight: $font-normal;
+			font-size: 18px;
+			font-family: $paragraph-font;
+			font-weight: $font-bold;
 			color: $font-color;
 		}
 	}
@@ -169,8 +163,11 @@
 /* Media query */
 @media (max-width: 1100px) {
 	.container {
-		width: 85vw;
+		width: 80vw;
+		float: right;
+		margin-right: 40px;
 	}
+
 	canvas {
 		top: 25% !important;
 	}
@@ -183,10 +180,11 @@
 
 		.container {
 			top: 0;
-			margin: 10px 5px 5px;
+			margin: 10px;
 			height: 100%;
-			width: 85vw;
-			float: left;
+			width: 90vw;
+			float: right;
+			margin-right: 30px;
 
 			.row {
 				@include flex(row, center, center);
@@ -218,20 +216,23 @@
 				}
 			}
 
-			.data h2,
-			p {
-				font-size: 14px;
+			.data {
+				margin: 0 auto;
+
+				p {
+					font-size: 14px;
+				}
 			}
 		}
 	}
 
 	.links {
 		.container {
-			top: 0;
-			margin: 10px 5px 5px;
+			margin: 10px;
 			height: 100%;
-			width: 85vw;
-			float: left;
+			width: 90vw;
+			float: right;
+			margin-right: 30px;
 
 			.row-button {
 				max-height: 50px;
@@ -244,12 +245,6 @@
 			.scroll-wrapper {
 				overflow-x: auto;
 				overflow-y: hidden;
-
-				td {
-					clear: left;
-					float: left;
-					width: 100%;
-				}
 			}
 		}
 	}
@@ -262,14 +257,17 @@
 
 		.container {
 			top: 0;
-			margin-top: 10px;
+			margin-top: 5px;
 			height: 100%;
-			width: 80vw;
-			float: left;
+			width: 85vw;
+			float: right;
+			margin-right: 5px;
+			margin-bottom: 10px;
 
 			.section-title {
-				font-size: 22px;
+				font-size: 20px;
 			}
+
 			.row {
 				@include flex(column, center, center);
 
@@ -309,16 +307,27 @@
 				}
 			}
 
-			.data {
-				h2,
-				p {
-					font-size: 14px;
+			.data-table {
+				@include flex(column, center, space-between);
+				align-items: center;
+
+				.data {
+					margin: 0;
+					width: 70%;
+
+					p {
+						font-size: 14px;
+					}
 				}
+			}
+
+			.title {
+				font-size: 14px;
 			}
 
 			.chart-row canvas {
 				transform: rotate(90deg) !important;
-				left: 0%;
+				left: 0;
 			}
 		}
 	}
@@ -326,9 +335,15 @@
 	.links {
 		.container {
 			height: 100%;
-			width: 80vw;
-			float: left;
-			margin-top: 10px;
+			width: 85vw;
+			float: right;
+			margin-top: 5px;
+			margin-right: 5px;
+			margin-bottom: 5px;
+
+			.section-title {
+				font-size: 18px;
+			}
 
 			.row-button {
 				max-height: 50px;
@@ -346,6 +361,11 @@
 					clear: left;
 					float: left;
 					width: 100%;
+					padding-left: 25px;
+
+					h3 {
+						font-size: 16px;
+					}
 				}
 			}
 		}

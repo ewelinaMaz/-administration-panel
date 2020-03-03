@@ -51,19 +51,23 @@ input {
 	margin-right: 15px;
 
 	&:focus {
-		border-color: $brand-second-color !important;
+		border-color: $brand-second-color;
 		outline-color: $brand-second-color;
 	}
 }
 @media (max-width: 1100px) {
 	.modal {
-		margin-right: 15px;
+		width: 70%;
+		height: 60%;
 
 		.row-contact {
 			@include flex(column, center, center);
 
 			input {
+				font-size: 11px;
 				margin-bottom: 5px;
+				height: 15px;
+				width: auto;
 			}
 		}
 	}
