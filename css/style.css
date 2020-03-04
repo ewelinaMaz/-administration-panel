@@ -3,14 +3,14 @@
 /* Fonts */
 /* Typography */
 .h1 {
-  font-family: "Open Sans", Helvetica, Arial;
+  font-family: "Lato", sans-serif;
   font-size: 26px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
 .h2 {
-  font-family: "Open Sans", Helvetica, Arial;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
@@ -18,7 +18,7 @@
 }
 
 .h3 {
-  font-family: "Open Sans", Helvetica, Arial;
+  font-family: "Lato", sans-serif;
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
@@ -26,7 +26,7 @@
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #535756;
   font-weight: 500;
 }
@@ -36,7 +36,7 @@ li a {
   color: darker(#FFFFFF, 10%);
   font-weight: 400;
   cursor: pointer;
-  font-family: "Open Sans", Helvetica, Arial;
+  font-family: "Lato", sans-serif;
 }
 
 .circle {
@@ -1346,7 +1346,7 @@ aside {
 
 aside .title {
   color: #FFFFFF;
-  font-family: "Gochi Hand", cursive;
+  font-family: "Courgette", cursive;
   font-weight: 400;
   font-size: 24px;
   display: inline-block;
