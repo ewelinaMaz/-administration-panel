@@ -16,15 +16,12 @@
 
 .title {
 	margin-top: 20px;
-	font-family: $paragraph-font;
 	font-size: 20px;
-	font-weight: $font-bold;
-	color: $font-color;
 }
 
 canvas {
-	margin: 15px;
-	margin-top: 25px;
+	margin: 20px 25px;
+	padding: 20px 40px;
 }
 /* Fake calendar */
 .calendar {
@@ -35,9 +32,8 @@ canvas {
 	height: 50px;
 	text-align: center;
 
-	h2 {
+	h3 {
 		margin: 0 auto;
-		color: $font-color;
 	}
 }
 
@@ -71,9 +67,6 @@ canvas {
 		p {
 			margin: 5px 20px;
 			font-size: 18px;
-			font-family: $paragraph-font;
-			font-weight: $font-bold;
-			color: $font-color;
 		}
 	}
 }
@@ -112,7 +105,7 @@ canvas {
 	top: 18%;
 
 	&:hover {
-		background: darken($brand-second-color, 5%);
+		background: darken($brand-second-color, 2%);
 	}
 }
 /* Table */
@@ -132,8 +125,7 @@ canvas {
 
 			h3 {
 				margin: 5px;
-				color: $font-color;
-				font-weight: $font-bold;
+				font-weight: $font-semibold;
 			}
 
 			.fa-link {
@@ -150,7 +142,7 @@ canvas {
 
 		tr:hover {
 			border: none;
-			background: lighten($brand-second-color, 25%);
+			background: lighten($brand-second-color, 40%);
 
 			i {
 				opacity: 1;
@@ -169,7 +161,8 @@ canvas {
 	}
 
 	canvas {
-		top: 25% !important;
+		margin: 0 auto;
+		padding: 0 auto;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -189,7 +182,7 @@ canvas {
 			.row {
 				@include flex(row, center, center);
 
-				.calendar h2 {
+				.calendar h3 {
 					font-size: 18px;
 				}
 
@@ -275,7 +268,7 @@ canvas {
 					border-right: 1px solid $font-color;
 					border-bottom: none;
 
-					h2 {
+					h3 {
 						font-size: 18px;
 					}
 				}
@@ -325,9 +318,9 @@ canvas {
 				font-size: 14px;
 			}
 
-			.chart-row canvas {
-				transform: rotate(90deg) !important;
-				left: 0;
+			canvas {
+				padding: 0 auto;
+				margin: 0 auto;
 			}
 		}
 	}

@@ -14,13 +14,21 @@
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
+  color: #535756;
 }
 
 .h3 {
   font-family: "Open Sans", Helvetica, Arial;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
+  color: #535756;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  color: #535756;
+  font-weight: 500;
 }
 
 li a {
@@ -28,6 +36,7 @@ li a {
   color: darker(#FFFFFF, 10%);
   font-weight: 400;
   cursor: pointer;
+  font-family: "Open Sans", Helvetica, Arial;
 }
 
 .circle {
@@ -796,15 +805,12 @@ body {
 
 .title {
   margin-top: 20px;
-  font-family: "Roboto", sans-serif;
   font-size: 20px;
-  font-weight: 700;
-  color: #535756;
 }
 
 canvas {
-  margin: 15px;
-  margin-top: 25px;
+  margin: 20px 25px;
+  padding: 20px 40px;
 }
 
 /* Fake calendar */
@@ -817,9 +823,8 @@ canvas {
   text-align: center;
 }
 
-.calendar h2 {
+.calendar h3 {
   margin: 0 auto;
-  color: #535756;
 }
 
 .img-calendar {
@@ -865,9 +870,6 @@ canvas {
 .data-table .data p {
   margin: 5px 20px;
   font-size: 18px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  color: #535756;
 }
 
 /* button */
@@ -940,7 +942,7 @@ canvas {
 }
 
 .add:hover {
-  background: #c86c1c;
+  background: #d5731e;
 }
 
 /* Table */
@@ -970,8 +972,7 @@ canvas {
 
 .table-row table td h3 {
   margin: 5px;
-  color: #535756;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .table-row table td .fa-link {
@@ -987,7 +988,7 @@ canvas {
 
 .table-row table tr:hover {
   border: none;
-  background: #efbb8d;
+  background: #f9e3d0;
 }
 
 .table-row table tr:hover i {
@@ -1004,7 +1005,8 @@ canvas {
     margin-right: 40px;
   }
   canvas {
-    top: 25% !important;
+    margin: 0 auto;
+    padding: 0 auto;
   }
 }
 
@@ -1090,7 +1092,7 @@ canvas {
     -ms-flex-pack: center;
         justify-content: center;
   }
-  .chart .container .row .calendar h2 {
+  .chart .container .row .calendar h3 {
     font-size: 18px;
   }
   .chart .container .row .img-calendar {
@@ -1229,7 +1231,7 @@ canvas {
     border-right: 1px solid #535756;
     border-bottom: none;
   }
-  .chart .container .row .calendar h2 {
+  .chart .container .row .calendar h3 {
     font-size: 18px;
   }
   .chart .container .row .img-calendar {
@@ -1278,9 +1280,9 @@ canvas {
   .chart .container .title {
     font-size: 14px;
   }
-  .chart .container .chart-row canvas {
-    transform: rotate(90deg) !important;
-    left: 0;
+  .chart .container canvas {
+    padding: 0 auto;
+    margin: 0 auto;
   }
   .links .container {
     height: 100%;
@@ -1344,7 +1346,7 @@ aside {
 
 aside .title {
   color: #FFFFFF;
-  font-family: "Lobster", cursive;
+  font-family: "Gochi Hand", cursive;
   font-weight: 400;
   font-size: 24px;
   display: inline-block;

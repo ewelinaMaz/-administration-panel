@@ -8,7 +8,7 @@ $color-light: #FFFFFF;
 $paragraph-font-size: 16px;
 /* Fonts */
 $brand-font: 'Open Sans', Helvetica, Arial;
-$brand-second-font: 'Lobster', cursive;
+$brand-second-font: 'Gochi Hand', cursive;
 $paragraph-font: 'Roboto', sans-serif;
 $font-light: 300;
 $font-normal: 400;
@@ -29,13 +29,20 @@ $radius: 4px;
 	font-size: 20px;
 	font-weight: $font-bold;
 	text-transform: uppercase;
+	color: $font-color;
 }
 
 .h3 {
 	font-family: $brand-font;
 	font-size: 18px;
-	font-weight: $font-bold;
+	font-weight: $font-semibold;
 	text-transform: uppercase;
+	color: $font-color;
+}
+p {
+	font-family: $paragraph-font;
+	color: $font-color;
+	font-weight: $font-semibold;
 }
 
 li a {
@@ -43,6 +50,7 @@ li a {
 	color: darker($color-light, 10%);
 	font-weight: $font-normal;
 	cursor: pointer;
+	font-family: $brand-font;
 }
 
 .circle {
