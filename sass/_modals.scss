@@ -49,6 +49,8 @@
 input {
 	height: 35px;
 	margin-right: 15px;
+	font-family: $paragraph-font;
+	text-align: center;
 
 	&:focus {
 		border-color: $brand-second-color;
@@ -59,6 +61,7 @@ input {
 	.modal {
 		width: 70%;
 		height: 60%;
+		top: -15%;
 
 		.row-contact {
 			@include flex(column, center, center);
@@ -66,9 +69,12 @@ input {
 			input {
 				font-size: 11px;
 				margin-bottom: 5px;
-				height: 15px;
+				height: 20px;
 				width: auto;
 			}
+		}
+		button {
+			font-size: 12px;
 		}
 	}
 }
