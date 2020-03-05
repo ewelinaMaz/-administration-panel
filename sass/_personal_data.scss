@@ -24,13 +24,17 @@
 }
 
 .form-title {
-	width: 80%;
+	width: 100%;
+	margin-left: 20px;
 }
 
 .js-close-form {
 	float: right;
 	font-size: 24px;
-	margin-right: 15px;
+	font-family: $paragraph-font;
+	margin-right: 20px;
+	margin-top: 5px;
+
 }
 
 .row-form {
@@ -47,7 +51,7 @@
 .field {
 	background: $color-light;
 	height: 100%;
-	width: 80vw;
+	width: 70vw;
 
 	button {
 		@include center;
@@ -62,10 +66,14 @@
 		margin: 10px 0;
 
 		label {
-			font-family: $font-normal;
-			font-size: 20px;
-			font-weight: $font-bold;
+			font-family: $paragraph-font;
+			font-size: 18px;
+			font-weight: $font-semibold;
 			color: $font-color;
+			border-radius: 5%;
+		}
+		input {
+			border: 1px solid $font-color;
 		}
 	}
 }

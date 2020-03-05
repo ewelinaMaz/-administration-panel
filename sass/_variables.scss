@@ -1,6 +1,6 @@
 /* Colors */
 $color-dark: #000000;
-$brand-main-color: #806A6A;
+$brand-main-color: #73839c;
 $brand-second-color: #DE781F;
 $font-color: #535756;
 $color-light: #FFFFFF;
@@ -18,22 +18,22 @@ $transition: all 0.3s;
 $radius: 4px;
 /* Typography */
 .h1 {
-	font-family: $brand-font;
+	font-family: $paragraph-font;
 	font-size: 26px;
 	font-weight: $font-semibold;
 	text-transform: uppercase;
 }
 
 .h2 {
-	font-family: $brand-font;
+	font-family: $paragraph-font;
 	font-size: 20px;
-	font-weight: $font-bold;
+	font-weight: $font-semibold;
 	text-transform: uppercase;
 	color: $font-color;
 }
 
 .h3 {
-	font-family: $brand-font;
+	font-family: $paragraph-font;
 	font-size: 18px;
 	font-weight: $font-semibold;
 	text-transform: uppercase;
@@ -42,7 +42,7 @@ $radius: 4px;
 p {
 	font-family: $paragraph-font;
 	color: $font-color;
-	font-weight: $font-semibold;
+	font-weight: $font-bold;
 }
 
 li a {

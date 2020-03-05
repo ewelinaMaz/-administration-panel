@@ -89,9 +89,18 @@ aside {
 		h3 {
 			display: inline-block;
 			margin-left: 15px;
+			font-family: $paragraph-font;
+			font-size: 18px;
+			font-weight: $font-semibold;
 		}
 	}
 	/* Comunication section */
+	.comunication h3 {
+		font-family: $paragraph-font;
+		font-size: 18px;
+		font-weight: $font-semibold;
+		margin-left: 5px;
+	}
 	.manager {
 		display: flex;
 		justify-content: space-around;
@@ -103,12 +112,24 @@ aside {
 			height: 50px;
 			border-radius: 50%;
 			background-color: $brand-main-color;
+
+			img {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				position: absolute;
+				overflow: hidden;
+			}
 		}
 
 		.circleManager {
 			bottom: 1%;
 			left: 29%;
 			background-color: #04ae00;
+		}
+		p {
+			font-family: $paragraph-font;
+			color: $font-color;
 		}
 	}
 }
@@ -152,7 +173,12 @@ aside {
 		line-height: 47px;
 		background-color: $color-dark;
 	}
-
+	ul {
+		margin-top: 40px;
+			h3 {
+				font-size: 14px;
+			}
+		}
 	.hide {
 		display: none;
 	}
@@ -162,7 +188,9 @@ aside {
 	}
 
 	aside .title {
-		margin-left: 70px;
-		margin-bottom: 0;
+		display: none;
+	}
+	.comunication {
+		display: none;
 	}
 }

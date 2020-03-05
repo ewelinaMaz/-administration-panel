@@ -3,22 +3,22 @@
 /* Fonts */
 /* Typography */
 .h1 {
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 26px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
 .h2 {
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   color: #535756;
 }
 
 .h3 {
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
@@ -28,7 +28,7 @@
 p {
   font-family: "Poppins", sans-serif;
   color: #535756;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 li a {
@@ -405,12 +405,11 @@ body {
 
 .container {
   position: relative;
-  max-width: 1400px;
-  width: 75vw;
-  margin: 40px auto;
+  width: calc(100vw - 250px);
+  margin: 20px auto;
   padding: 10px 20px;
   background: #FFFFFF;
-  left: 5%;
+  float: right;
 }
 
 .container-fluid {
@@ -789,13 +788,18 @@ body {
 /*------------------------------------------------------------------------*/
 /*Chart*/
 .chart {
-  margin-top: 110px;
+  margin-top: 90px;
 }
 
 .section-title {
   border-bottom: 1px solid #535756;
   color: #535756;
   margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #535756;
 }
 
 .row {
@@ -805,7 +809,10 @@ body {
 
 .title {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #535756;
 }
 
 canvas {
@@ -821,10 +828,21 @@ canvas {
   padding: 5px;
   height: 50px;
   text-align: center;
+  margin: 40px 0;
 }
 
-.calendar h3 {
+.calendar .inner-calendar {
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align: center;
+}
+
+.calendar input {
   margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  color: #535756;
+  font-weight: 500;
 }
 
 .img-calendar {
@@ -849,7 +867,8 @@ canvas {
 /* datasets */
 .data-table {
   border-top: solid 1px #535756;
-  margin: 40px 0 auto;
+  margin: 40px 0;
+  margin-top: 20px;
   min-height: 170px;
 }
 
@@ -863,13 +882,22 @@ canvas {
   -ms-flex-pack: justify;
       justify-content: space-between;
   border-bottom: solid 1px #535756;
-  margin: 0 30px;
+  margin: 30px;
   height: 50px;
 }
 
 .data-table .data p {
   margin: 5px 20px;
   font-size: 18px;
+}
+
+.data-table .data p:first-of-type {
+  color: #73839c;
+}
+
+.data-table .data p:last-of-type {
+  color: #000000;
+  font-weight: 500;
 }
 
 /* button */
@@ -893,6 +921,7 @@ canvas {
   opacity: 0.8;
   color: #FFFFFF;
   font-size: 24px;
+  font-family: "Poppins", sans-serif;
 }
 
 .main:hover {
@@ -960,18 +989,28 @@ canvas {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  margin: 0 30px;
+  margin: 0 20px;
   border-collapse: collapse;
 }
 
 .table-row table td {
-  max-height: 35px;
-  padding-right: 60px;
+  max-height: 45px;
+  padding-right: 100px;
   border-bottom: solid 1px #000000;
 }
 
 .table-row table td h3 {
   margin: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #535756;
+}
+
+.table-row table td a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #73839c;
   font-weight: 500;
 }
 
@@ -988,7 +1027,7 @@ canvas {
 
 .table-row table tr:hover {
   border: none;
-  background: #f9e3d0;
+  background: #ebebeb;
 }
 
 .table-row table tr:hover i {
@@ -1000,11 +1039,13 @@ canvas {
 /* Media query */
 @media (max-width: 1100px) {
   .container {
-    width: 80vw;
+    top: 0;
+    margin: 10px;
+    height: 100%;
+    width: calc(100vw - 220px);
     float: right;
-    margin-right: 40px;
   }
-  canvas {
+  .container canvas {
     margin: 0 auto;
     padding: 0 auto;
   }
@@ -1078,9 +1119,8 @@ canvas {
     top: 0;
     margin: 10px;
     height: 100%;
-    width: 90vw;
+    width: calc(100vw - 70px);
     float: right;
-    margin-right: 30px;
   }
   .chart .container .row {
     display: -ms-flexbox;
@@ -1123,11 +1163,11 @@ canvas {
     font-size: 14px;
   }
   .links .container {
+    top: 0;
     margin: 10px;
     height: 100%;
-    width: 90vw;
+    width: calc(100vw - 70px);
     float: right;
-    margin-right: 30px;
   }
   .links .container .row-button {
     max-height: 50px;
@@ -1207,12 +1247,10 @@ canvas {
   }
   .chart .container {
     top: 0;
-    margin-top: 5px;
+    margin: 10px;
     height: 100%;
-    width: 85vw;
+    width: calc(100vw - 70px);
     float: right;
-    margin-right: 5px;
-    margin-bottom: 10px;
   }
   .chart .container .section-title {
     font-size: 20px;
@@ -1229,19 +1267,14 @@ canvas {
   }
   .chart .container .row .calendar {
     border-right: 1px solid #535756;
-    border-bottom: none;
+    margin: 1px auto;
+    width: 40vw;
   }
-  .chart .container .row .calendar h3 {
-    font-size: 18px;
+  .chart .container .row .calendar input {
+    font-size: 12px;
   }
   .chart .container .row .img-calendar {
-    border-left: 1px solid #535756;
-    display: inline-block;
-    width: 93px;
-    height: 30px;
-  }
-  .chart .container .row .img-calendar .icon-calendar {
-    font-size: 16px;
+    display: none;
   }
   .chart .container .row .main {
     width: 30px;
@@ -1252,7 +1285,7 @@ canvas {
     margin-left: 0;
   }
   .chart .container .row .main .fa-redo {
-    font-size: 16px;
+    font-size: 14px;
     position: absolute;
     position: absolute;
     left: 50%;
@@ -1272,10 +1305,10 @@ canvas {
   }
   .chart .container .data-table .data {
     margin: 0;
-    width: 70%;
+    width: 80%;
   }
   .chart .container .data-table .data p {
-    font-size: 14px;
+    font-size: 12px;
   }
   .chart .container .title {
     font-size: 14px;
@@ -1285,12 +1318,11 @@ canvas {
     margin: 0 auto;
   }
   .links .container {
+    top: 0;
+    margin: 10px;
     height: 100%;
-    width: 85vw;
+    width: calc(100vw - 70px);
     float: right;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
   }
   .links .container .section-title {
     font-size: 18px;
@@ -1299,7 +1331,7 @@ canvas {
     max-height: 50px;
   }
   .links .container .row-button .add {
-    font-size: 14px;
+    font-size: 12px;
   }
   .links .container .scroll-wrapper {
     overflow-x: auto;
@@ -1309,10 +1341,14 @@ canvas {
     clear: left;
     float: left;
     width: 100%;
-    padding-left: 25px;
+    padding-left: 10px;
+    margin-left: 35px;
   }
   .links .container .scroll-wrapper td h3 {
-    font-size: 16px;
+    font-size: 12px;
+  }
+  .links .container .scroll-wrapper td a {
+    font-size: 12px;
   }
 }
 
@@ -1426,6 +1462,16 @@ aside ul li i {
 aside ul h3 {
   display: inline-block;
   margin-left: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+aside .comunication h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 5px;
 }
 
 aside .manager {
@@ -1442,13 +1488,26 @@ aside .manager .managerImg {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #806A6A;
+  background-color: #73839c;
+}
+
+aside .manager .managerImg img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
 }
 
 aside .manager .circleManager {
   bottom: 1%;
   left: 29%;
   background-color: #04ae00;
+}
+
+aside .manager p {
+  font-family: "Poppins", sans-serif;
+  color: #535756;
 }
 
 /*--------------------------------------------------------------------------/
@@ -1489,6 +1548,12 @@ aside .manager .circleManager {
     line-height: 47px;
     background-color: #000000;
   }
+  ul {
+    margin-top: 40px;
+  }
+  ul h3 {
+    font-size: 14px;
+  }
   .hide {
     display: none;
   }
@@ -1496,15 +1561,17 @@ aside .manager .circleManager {
     height: 100vh;
   }
   aside .title {
-    margin-left: 70px;
-    margin-bottom: 0;
+    display: none;
+  }
+  .comunication {
+    display: none;
   }
 }
 
 /*------------------------------------------------------------------------*/
 /* header */
 .header-section {
-  height: 80px;
+  height: 70px;
   top: 0;
   position: fixed;
   width: 100vw;
@@ -1523,13 +1590,14 @@ header {
       align-items: center;
   -ms-flex-pack: end;
       justify-content: flex-end;
+  height: 70px;
 }
 
 header .header_item-md {
   position: relative;
   display: block;
   border-left: 1px solid #535756;
-  height: 80px;
+  height: 70px;
 }
 
 header .header_item-md:hover {
@@ -1540,12 +1608,10 @@ header .header_item-md:hover {
 header .header_item-md .item {
   text-align: center;
   display: inline-block;
-  height: 80px;
+  height: 70px;
   width: 30px;
-  font-size: 24px;
-  font-weight: 700;
-  color: #535756;
-  margin-top: 20px;
+  font-size: 22px;
+  margin-top: 15px;
   margin-left: 15px;
 }
 
@@ -1554,17 +1620,23 @@ header .header_item-md .item-text {
   display: inline-block;
   text-align: center;
   margin-left: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #73839c;
+  font-weight: 500;
+  top: -4%;
+  font-size: 18px;
 }
 
 header .header_item-md .amount {
-  font-size: 21px;
+  font-size: 20px;
 }
 
 header .header_item-md .icon-arrow-down {
   float: right;
-  bottom: 10%;
-  width: 30px;
-  margin-right: 5px;
+  bottom: 8%;
+  width: 20px;
+  font-size: 18px;
+  margin-right: 15px;
 }
 
 header .header_item-sm {
@@ -1572,7 +1644,8 @@ header .header_item-sm {
   display: block;
   border-left: 1px solid #535756;
   border-right: none;
-  height: 80px;
+  height: 70px;
+  padding-top: 6px;
 }
 
 header .header_item-sm:hover {
@@ -1705,13 +1778,16 @@ header .header_item-sm i {
 }
 
 .form-title {
-  width: 80%;
+  width: 100%;
+  margin-left: 20px;
 }
 
 .js-close-form {
   float: right;
   font-size: 24px;
-  margin-right: 15px;
+  font-family: "Poppins", sans-serif;
+  margin-right: 20px;
+  margin-top: 5px;
 }
 
 .row-form {
@@ -1742,7 +1818,7 @@ header .header_item-sm i {
 .field {
   background: #FFFFFF;
   height: 100%;
-  width: 80vw;
+  width: 70vw;
 }
 
 .field button {
@@ -1769,10 +1845,15 @@ header .header_item-sm i {
 }
 
 .field .row-contact label {
-  font-family: 400;
-  font-size: 20px;
-  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
   color: #535756;
+  border-radius: 5%;
+}
+
+.field .row-contact input {
+  border: 1px solid #535756;
 }
 
 @media (min-width: 768px) and (max-width: 1100px) {

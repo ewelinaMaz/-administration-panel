@@ -1,13 +1,18 @@
 /*------------------------------------------------------------------------*/
 /*Chart*/
 .chart {
-	margin-top: 110px;
+	margin-top: 90px;
 }
 
 .section-title {
 	border-bottom: 1px solid $font-color;
 	color: $font-color;
 	margin-bottom: 30px;
+	font-family: $paragraph-font;
+	font-size: 26px;
+	font-weight: $font-semibold;
+	text-transform: uppercase;
+	color: $font-color;
 }
 
 .row {
@@ -16,7 +21,10 @@
 
 .title {
 	margin-top: 20px;
-	font-size: 20px;
+	font-size: 22px;
+	font-family: $paragraph-font;
+	font-weight: $font-semibold;
+	color: $font-color;
 }
 
 canvas {
@@ -31,9 +39,20 @@ canvas {
 	padding: 5px;
 	height: 50px;
 	text-align: center;
+	margin: 40px 0;
 
-	h3 {
+	.inner-calendar {
+		width: 100%;
+		height: 100%;
+		border: none;
+		text-align: center;
+	}
+
+	input {
 		margin: 0 auto;
+		font-family: $paragraph-font;
+		color: $font-color;
+		font-weight: $font-semibold;
 	}
 }
 
@@ -55,18 +74,27 @@ canvas {
 /* datasets */
 .data-table {
 	border-top: solid 1px $font-color;
-	margin: 40px 0 auto;
+	margin: 40px 0;
+	margin-top: 20px;
 	min-height: 170px;
 
 	.data {
 		@include flex(row, space-around, space-between);
 		border-bottom: solid 1px $font-color;
-		margin: 0 30px;
+		margin: 30px;
 		height: 50px;
 
 		p {
 			margin: 5px 20px;
 			font-size: 18px;
+			&:first-of-type {
+				color: $brand-main-color;
+			}
+
+			&:last-of-type {
+				color: $color-dark;
+				font-weight: $font-semibold;
+			}
 		}
 	}
 }
@@ -80,6 +108,7 @@ canvas {
 	opacity: 0.8;
 	color: $color-light;
 	font-size: 24px;
+	font-family: $paragraph-font;
 
 	&:hover {
 		background: darken($brand-second-color, 5%);
@@ -115,16 +144,25 @@ canvas {
 
 	table {
 		@include flex(row, center, center);
-		margin: 0 30px;
+		margin: 0 20px;
 		border-collapse: collapse;
 
 		td {
-			max-height: 35px;
-			padding-right: 60px;
+			max-height: 45px;
+			padding-right: 100px;
 			border-bottom: solid 1px $color-dark;
 
 			h3 {
 				margin: 5px;
+				font-family: $paragraph-font;
+				font-size: 18px;
+				font-weight: $font-semibold;
+				color: $font-color;
+			}
+			a {
+				text-decoration: none;
+				font-family: $paragraph-font;
+				color: $brand-main-color;
 				font-weight: $font-semibold;
 			}
 
@@ -142,7 +180,7 @@ canvas {
 
 		tr:hover {
 			border: none;
-			background: lighten($brand-second-color, 40%);
+			background: darken($color-light, 8%);
 
 			i {
 				opacity: 1;
@@ -155,212 +193,208 @@ canvas {
 /* Media query */
 @media (max-width: 1100px) {
 	.container {
-		width: 80vw;
+		top: 0;
+		margin: 10px;
+		height: 100%;
+		width: calc(100vw - 220px);
 		float: right;
-		margin-right: 40px;
-	}
 
-	canvas {
-		margin: 0 auto;
-		padding: 0 auto;
-	}
-}
-@media (min-width: 768px) and (max-width: 991px) {
-	@include grid('md');
-
-	.chart {
-		margin-top: 0;
-
-		.container {
-			top: 0;
-			margin: 10px;
-			height: 100%;
-			width: 90vw;
-			float: right;
-			margin-right: 30px;
-
-			.row {
-				@include flex(row, center, center);
-
-				.calendar h3 {
-					font-size: 18px;
-				}
-
-				.img-calendar {
-					display: inline-block;
-
-					.icon-calendar {
-						font-size: 16px;
-					}
-				}
-
-				.main {
-					width: 35px;
-					height: 35px;
-					line-height: 35px;
-					position: relative;
-					margin-left: 15px;
-
-					.fa-redo {
-						font-size: 16px;
-						position: absolute;
-						@include center;
-					}
-				}
-			}
-
-			.data {
-				margin: 0 auto;
-
-				p {
-					font-size: 14px;
-				}
-			}
-		}
-	}
-
-	.links {
-		.container {
-			margin: 10px;
-			height: 100%;
-			width: 90vw;
-			float: right;
-			margin-right: 30px;
-
-			.row-button {
-				max-height: 50px;
-
-				.add {
-					font-size: 14px;
-				}
-			}
-
-			.scroll-wrapper {
-				overflow-x: auto;
-				overflow-y: hidden;
-			}
+		canvas {
+			margin: 0 auto;
+			padding: 0 auto;
 		}
 	}
 }
-@media (max-width: 767px) {
-	@include grid('sm');
+	@media (min-width: 768px) and (max-width: 991px) {
+		@include grid('md');
 
-	.chart {
-		margin-top: 0;
+		.chart {
+			margin-top: 0;
 
-		.container {
-			top: 0;
-			margin-top: 5px;
-			height: 100%;
-			width: 85vw;
-			float: right;
-			margin-right: 5px;
-			margin-bottom: 10px;
+			.container {
+				top: 0;
+				margin: 10px;
+				height: 100%;
+				width: calc(100vw - 70px);
+				float: right;
 
-			.section-title {
-				font-size: 20px;
-			}
+				.row {
+					@include flex(row, center, center);
 
-			.row {
-				@include flex(column, center, center);
-
-				.calendar {
-					border-right: 1px solid $font-color;
-					border-bottom: none;
-
-					h3 {
+					.calendar h3 {
 						font-size: 18px;
 					}
-				}
 
-				.img-calendar {
-					border-left: 1px solid $font-color;
-					display: inline-block;
-					width: 93px;
-					height: 30px;
+					.img-calendar {
+						display: inline-block;
 
-					.icon-calendar {
-						font-size: 16px;
+						.icon-calendar {
+							font-size: 16px;
+						}
+					}
+
+					.main {
+						width: 35px;
+						height: 35px;
+						line-height: 35px;
+						position: relative;
+						margin-left: 15px;
+
+						.fa-redo {
+							font-size: 16px;
+							position: absolute;
+							@include center;
+						}
 					}
 				}
-
-				.main {
-					width: 30px;
-					height: 30px;
-					line-height: 30px;
-					margin-top: 15px;
-					position: relative;
-					margin-left: 0;
-
-					.fa-redo {
-						font-size: 16px;
-						position: absolute;
-						@include center;
-					}
-				}
-			}
-
-			.data-table {
-				@include flex(column, center, space-between);
-				align-items: center;
 
 				.data {
-					margin: 0;
-					width: 70%;
+					margin: 0 auto;
 
 					p {
 						font-size: 14px;
 					}
 				}
 			}
+		}
 
-			.title {
-				font-size: 14px;
-			}
+		.links {
+			.container {
+				top: 0;
+				margin: 10px;
+				height: 100%;
+				width: calc(100vw - 70px);
+				float: right;
 
-			canvas {
-				padding: 0 auto;
-				margin: 0 auto;
+				.row-button {
+					max-height: 50px;
+
+					.add {
+						font-size: 14px;
+					}
+				}
+
+				.scroll-wrapper {
+					overflow-x: auto;
+					overflow-y: hidden;
+				}
 			}
 		}
 	}
+	@media (max-width: 767px) {
+		@include grid('sm');
 
-	.links {
-		.container {
-			height: 100%;
-			width: 85vw;
-			float: right;
-			margin-top: 5px;
-			margin-right: 5px;
-			margin-bottom: 5px;
+		.chart {
+			margin-top: 0;
 
-			.section-title {
-				font-size: 18px;
-			}
+			.container {
+				top: 0;
+				margin: 10px;
+				height: 100%;
+				width: calc(100vw - 70px);
+				float: right;
 
-			.row-button {
-				max-height: 50px;
+				.section-title {
+					font-size: 20px;
+				}
 
-				.add {
+				.row {
+					@include flex(column, center, center);
+
+					.calendar {
+						border-right: 1px solid $font-color;
+						margin: 1px auto;
+						width: 40vw;
+
+						input {
+							font-size: 12px;
+						}
+					}
+
+					.img-calendar {
+						display: none;
+					}
+
+					.main {
+						width: 30px;
+						height: 30px;
+						line-height: 30px;
+						margin-top: 15px;
+						position: relative;
+						margin-left: 0;
+
+						.fa-redo {
+							font-size: 14px;
+							position: absolute;
+							@include center;
+						}
+					}
+				}
+
+				.data-table {
+					@include flex(column, center, space-between);
+					align-items: center;
+
+					.data {
+						margin: 0;
+						width: 80%;
+
+						p {
+							font-size: 12px;
+						}
+					}
+				}
+
+				.title {
 					font-size: 14px;
 				}
+
+				canvas {
+					padding: 0 auto;
+					margin: 0 auto;
+				}
 			}
+		}
 
-			.scroll-wrapper {
-				overflow-x: auto;
-				overflow-y: hidden;
+		.links {
+			.container {
+				top: 0;
+				margin: 10px;
+				height: 100%;
+				width: calc(100vw - 70px);
+				float: right;
 
-				td {
-					clear: left;
-					float: left;
-					width: 100%;
-					padding-left: 25px;
+				.section-title {
+					font-size: 18px;
+				}
 
-					h3 {
-						font-size: 16px;
+				.row-button {
+					max-height: 50px;
+
+					.add {
+						font-size: 12px;
+					}
+				}
+
+				.scroll-wrapper {
+					overflow-x: auto;
+					overflow-y: hidden;
+
+					td {
+						clear: left;
+						float: left;
+						width: 100%;
+						padding-left: 10px;
+						margin-left: 35px;
+
+						h3 {
+							font-size: 12px;
+						}
+						a {
+							font-size: 12px;
+						}
 					}
 				}
 			}
 		}
 	}
-}

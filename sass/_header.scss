@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------------*/
 /* header */
 .header-section {
-	height: 80px;
+	height: 70px;
 	top: 0;
 	position: fixed;
 	width: 100vw;
@@ -13,12 +13,13 @@ header {
 	background-color: $color-light;
 	color: $font-color;
 	@include flex(row, center, flex-end);
+	height: 70px;
 
 	.header_item-md {
 		position: relative;
 		display: block;
 		border-left: 1px solid $font-color;
-		height: 80px;
+		height: 70px;
 
 		&:hover {
 			background: darken($color-light, 8%);
@@ -28,12 +29,10 @@ header {
 		.item {
 			text-align: center;
 			display: inline-block;
-			height: 80px;
+			height: 70px;
 			width: 30px;
-			font-size: 24px;
-			font-weight: $font-bold;
-			color: $font-color;
-			margin-top: 20px;
+			font-size: 22px;
+			margin-top: 15px;
 			margin-left: 15px;
 		}
 
@@ -42,17 +41,23 @@ header {
 			display: inline-block;
 			text-align: center;
 			margin-left: 15px;
+			font-family: $paragraph-font;
+			color: $brand-main-color;
+			font-weight: $font-semibold;
+			top:-4%;
+			font-size: 18px;
 		}
 
 		.amount {
-			font-size: 21px;
+			font-size: 20px;
 		}
 
 		.icon-arrow-down {
 			float: right;
-			bottom: 10%;
-			width: 30px;
-			margin-right: 5px;
+			bottom: 8%;
+			width: 20px;
+			font-size: 18px;
+			margin-right: 15px;
 		}
 	}
 
@@ -61,7 +66,8 @@ header {
 		display: block;
 		border-left: 1px solid $font-color;
 		border-right: none;
-		height: 80px;
+		height: 70px;
+		padding-top: 6px;
 
 		&:hover {
 			background: darken($color-light, 8%);
