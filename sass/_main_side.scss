@@ -221,8 +221,12 @@ canvas {
 				.row {
 					@include flex(row, center, center);
 
-					.calendar h3 {
-						font-size: 18px;
+					.calendar {
+						flex: 0 0 16.66667% !important;
+
+						h3 {
+							font-size: 16px;
+						}
 					}
 
 					.img-calendar {

@@ -1132,8 +1132,12 @@ canvas {
     -ms-flex-pack: center;
         justify-content: center;
   }
+  .chart .container .row .calendar {
+    -ms-flex: 0 0 16.66667% !important;
+        flex: 0 0 16.66667% !important;
+  }
   .chart .container .row .calendar h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
   .chart .container .row .img-calendar {
     display: inline-block;
